@@ -61,7 +61,6 @@ describe('eventToSentryRequest', () => {
         environment: 'dogpark',
         public_key: 'dogsarebadatkeepingsecrets',
         release: 'off.leash.park',
-        trace_id: traceId,
       }),
     });
     expect(envelope.itemHeader).toEqual({ type: 'transaction' });
