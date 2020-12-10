@@ -22,7 +22,7 @@ export class API {
     const dsn = this._dsnObject;
     const protocol = dsn.protocol ? `${dsn.protocol}:` : '';
     const port = dsn.port ? `:${dsn.port}` : '';
-    return `${protocol}//${dsn.host}${port}${dsn.path ? `/${dsn.path}` : ''}/api/`;
+    return `${protocol}//${dsn.host}${port}`;
   }
 
   /** Returns the store endpoint URL. */
@@ -120,7 +120,16 @@ export class API {
   private _getIngestEndpoint(target: 'store' | 'envelope'): string {
     const base = this.getBaseApiEndpoint();
     const dsn = this._dsnObject;
-    return `${base}${dsn.projectId}/${target}/`;
+    if (dsn.fullPath) {
+      const { base: path  = '', store = '', envelope = '' } = dsn.fullPath;
+      return `${base}/${target == 'store'
+        ? `${path}${store}`
+        : target == 'envelope'
+          ? `${path}${envelope}`
+          : ''}`
+    }
+    const path =  `${dsn.path ? `/${dsn.path}` : ''}/api/`
+    return `${base}${path}${dsn.projectId}/${target}/`;
   }
 
   /** Returns a URL-encoded string with auth config suitable for a query string. */
@@ -129,6 +138,7 @@ export class API {
     const auth = {
       // We send only the minimum set of required information. See
       // https://github.com/getsentry/sentry-javascript/issues/2572.
+      projectId: dsn.projectId,
       sentry_key: dsn.user,
       sentry_version: SENTRY_API_VERSION,
     };

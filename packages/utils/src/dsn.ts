@@ -1,4 +1,4 @@
-import { DsnComponents, DsnLike, DsnProtocol } from '@sentry-csii/types';
+import { DsnComponents, DsnLike, DsnPath, DsnProtocol } from '@sentry-csii/types';
 
 import { SentryError } from './error';
 
@@ -22,6 +22,8 @@ export class Dsn implements DsnComponents {
   public port!: string;
   /** Path */
   public path!: string;
+  /** full path. If there is an fullPath then path is invalid */
+  public fullPath?: DsnPath;
   /** Project ID */
   public projectId!: string;
 
@@ -49,7 +51,8 @@ export class Dsn implements DsnComponents {
     const { host, path, pass, port, projectId, protocol, user } = this;
     return (
       `${protocol}://${user}${withPassword && pass ? `:${pass}` : ''}` +
-      `@${host}${port ? `:${port}` : ''}/${path ? `${path}/` : path}${projectId}`
+      `@${host}${port ? `:${port}` : ''}/` +
+      `${path ? `${path}/` : path} ${ projectId }`
     );
   }
 
@@ -89,6 +92,7 @@ export class Dsn implements DsnComponents {
     this.host = components.host;
     this.port = components.port || '';
     this.path = components.path || '';
+    this.fullPath = components.fullPath;
     this.projectId = components.projectId;
   }
 
@@ -110,6 +114,16 @@ export class Dsn implements DsnComponents {
 
     if (this.port && isNaN(parseInt(this.port, 10))) {
       throw new SentryError(`${ERROR_MESSAGE}: Invalid port ${this.port}`);
+    }
+
+    if (this.fullPath && !this.fullPath.base) {
+      throw new SentryError(`${ERROR_MESSAGE}: Invalid fullPath.base ${JSON.stringify(this.fullPath)}`);
+    }
+    if (this.fullPath && !this.fullPath.store) {
+      throw new SentryError(`${ERROR_MESSAGE}: Invalid fullPath.store ${JSON.stringify(this.fullPath)}`);
+    }
+    if (this.fullPath && !this.fullPath.envelope) {
+      throw new SentryError(`${ERROR_MESSAGE}: Invalid fullPath.envelope ${JSON.stringify(this.fullPath)}`);
     }
   }
 }

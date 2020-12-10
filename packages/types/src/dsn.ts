@@ -1,6 +1,17 @@
 /** Supported Sentry transport protocols in a Dsn. */
 export type DsnProtocol = 'http' | 'https';
 
+
+/** Dsn's original path props. */
+export interface DsnPath {
+  /** base path  */
+  base: string;
+  /** store point path  */
+  store: string;
+  /** envelope path  */
+  envelope: string;
+}
+
 /** Primitive components of a Dsn. */
 export interface DsnComponents {
   /** Protocol used to connect to Sentry. */
@@ -15,7 +26,9 @@ export interface DsnComponents {
   port?: string;
   /** Sub path/ */
   path?: string;
-  /** Project ID */
+  /** base path. If there is an basePath then path is invalid */
+  fullPath?: DsnPath;
+  /** Project ID. */
   projectId: string;
 }
 
