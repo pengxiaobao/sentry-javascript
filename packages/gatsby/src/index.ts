@@ -1,1 +1,1 @@
-export * from '@sentry/react';
+export * from '@sentry-csii/react';

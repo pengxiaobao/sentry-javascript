@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { getGlobalObject } from '@sentry/utils';
+import { getGlobalObject } from '@sentry-csii/utils';
 
 import { initMetric } from './lib/initMetric';
 import { NavigationTimingPolyfillEntry, ReportHandler } from './types';

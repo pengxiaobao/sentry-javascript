@@ -1,6 +1,6 @@
-import { API, eventToSentryRequest } from '@sentry/core';
-import { Event, Response, Status, Transport, TransportOptions } from '@sentry/types';
-import { logger, parseRetryAfterHeader, PromiseBuffer, SentryError } from '@sentry/utils';
+import { API, eventToSentryRequest } from '@sentry-csii/core';
+import { Event, Response, Status, Transport, TransportOptions } from '@sentry-csii/types';
+import { logger, parseRetryAfterHeader, PromiseBuffer, SentryError } from '@sentry-csii/utils';
 import * as fs from 'fs';
 import * as http from 'http';
 import * as https from 'https';

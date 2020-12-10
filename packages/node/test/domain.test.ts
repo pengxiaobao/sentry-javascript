@@ -1,4 +1,4 @@
-import { getCurrentHub, Hub } from '@sentry/core';
+import { getCurrentHub, Hub } from '@sentry-csii/core';
 import * as domain from 'domain';
 
 // We need this import here to patch domain on the global object

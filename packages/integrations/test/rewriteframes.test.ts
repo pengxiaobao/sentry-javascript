@@ -1,4 +1,4 @@
-import { Event, StackFrame } from '@sentry/types';
+import { Event, StackFrame } from '@sentry-csii/types';
 
 import { RewriteFrames } from '../src/rewriteframes';
 

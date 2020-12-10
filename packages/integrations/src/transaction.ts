@@ -1,4 +1,4 @@
-import { Event, EventProcessor, Hub, Integration, StackFrame } from '@sentry/types';
+import { Event, EventProcessor, Hub, Integration, StackFrame } from '@sentry-csii/types';
 
 /** Add node transaction to the event */
 export class Transaction implements Integration {

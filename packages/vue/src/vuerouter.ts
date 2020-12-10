@@ -1,5 +1,5 @@
-import { captureException } from '@sentry/browser';
-import { Transaction, TransactionContext } from '@sentry/types';
+import { captureException } from '@sentry-csii/browser';
+import { Transaction, TransactionContext } from '@sentry-csii/types';
 import VueRouter from 'vue-router';
 
 export type Action = 'PUSH' | 'REPLACE' | 'POP';

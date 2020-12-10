@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Measurements, SpanContext } from '@sentry/types';
-import { browserPerformanceTimeOrigin, getGlobalObject, logger } from '@sentry/utils';
+import { Measurements, SpanContext } from '@sentry-csii/types';
+import { browserPerformanceTimeOrigin, getGlobalObject, logger } from '@sentry-csii/utils';
 
 import { Span } from '../span';
 import { Transaction } from '../transaction';

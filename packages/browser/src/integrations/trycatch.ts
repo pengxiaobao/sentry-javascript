@@ -1,5 +1,5 @@
-import { Integration, WrappedFunction } from '@sentry/types';
-import { fill, getFunctionName, getGlobalObject } from '@sentry/utils';
+import { Integration, WrappedFunction } from '@sentry-csii/types';
+import { fill, getFunctionName, getGlobalObject } from '@sentry-csii/utils';
 
 import { wrap } from '../helpers';
 

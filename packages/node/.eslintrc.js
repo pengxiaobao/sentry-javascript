@@ -7,7 +7,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  extends: ['@sentry-internal/sdk'],
+  extends: ['@sentry-csii-internal/sdk'],
   ignorePatterns: ['build/**', 'dist/**', 'esm/**', 'examples/**', 'scripts/**', 'test/manual/**'],
   overrides: [
     {
@@ -33,6 +33,6 @@ module.exports = {
   rules: {
     'prefer-rest-params': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    '@sentry-internal/sdk/no-async-await': 'off',
+    '@sentry-csii-internal/sdk/no-async-await': 'off',
   },
 };

@@ -18,8 +18,8 @@ import {
   Transaction,
   TransactionContext,
   User,
-} from '@sentry/types';
-import { consoleSandbox, dateTimestampInSeconds, getGlobalObject, isNodeEnv, logger, uuid4 } from '@sentry/utils';
+} from '@sentry-csii/types';
+import { consoleSandbox, dateTimestampInSeconds, getGlobalObject, isNodeEnv, logger, uuid4 } from '@sentry-csii/utils';
 
 import { Carrier, DomainAsCarrier, Layer } from './interfaces';
 import { Scope } from './scope';

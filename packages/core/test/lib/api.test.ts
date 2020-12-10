@@ -1,10 +1,10 @@
-import { Dsn } from '@sentry/utils';
+import { Dsn } from '@sentry-csii/utils';
 
 import { API } from '../../src/api';
 
 const ingestDsn = 'https://abc@xxxx.ingest.sentry.io:1234/subpath/123';
-const dsnPublic = 'https://abc@sentry.io:1234/subpath/123';
-const legacyDsn = 'https://abc:123@sentry.io:1234/subpath/123';
+const dsnPublic = 'https://abc@sentry-csii.io:1234/subpath/123';
+const legacyDsn = 'https://abc:123@sentry-csii.io:1234/subpath/123';
 
 describe('API', () => {
   test('getStoreEndpoint', () => {
@@ -35,7 +35,7 @@ describe('API', () => {
     );
 
     expect(new API(dsnPublic).getReportDialogEndpoint({})).toEqual(
-      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123',
+      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry-csii.io:1234/subpath/123',
     );
     expect(
       new API(dsnPublic).getReportDialogEndpoint({
@@ -43,7 +43,7 @@ describe('API', () => {
         testy: '2',
       }),
     ).toEqual(
-      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc&testy=2',
+      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry-csii.io:1234/subpath/123&eventId=abc&testy=2',
     );
 
     expect(
@@ -55,7 +55,7 @@ describe('API', () => {
         },
       }),
     ).toEqual(
-      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc&name=yo&email=email',
+      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry-csii.io:1234/subpath/123&eventId=abc&name=yo&email=email',
     );
 
     expect(
@@ -64,7 +64,7 @@ describe('API', () => {
         user: undefined,
       }),
     ).toEqual(
-      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry.io:1234/subpath/123&eventId=abc',
+      'https://sentry.io:1234/subpath/api/embed/error-page/?dsn=https://abc@sentry-csii.io:1234/subpath/123&eventId=abc',
     );
   });
   test('getDsn', () => {

@@ -1,5 +1,5 @@
-import { BrowserClient } from '@sentry/browser';
-import { Hub, makeMain } from '@sentry/hub';
+import { BrowserClient } from '@sentry-csii/browser';
+import { Hub, makeMain } from '@sentry-csii/hub';
 
 import { SpanStatus } from '../src';
 import { registerErrorInstrumentation } from '../src/errors';
@@ -8,8 +8,8 @@ import { _addTracingExtensions } from '../src/hubextensions';
 const mockAddInstrumentationHandler = jest.fn();
 let mockErrorCallback: () => void = () => undefined;
 let mockUnhandledRejectionCallback: () => void = () => undefined;
-jest.mock('@sentry/utils', () => {
-  const actual = jest.requireActual('@sentry/utils');
+jest.mock('@sentry-csii/utils', () => {
+  const actual = jest.requireActual('@sentry-csii/utils');
   return {
     ...actual,
     addInstrumentationHandler: ({ callback, type }: any) => {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { EventProcessor, Hub, Integration } from '@sentry/types';
-import { getGlobalObject, supportsReportingObserver } from '@sentry/utils';
+import { EventProcessor, Hub, Integration } from '@sentry-csii/types';
+import { getGlobalObject, supportsReportingObserver } from '@sentry-csii/utils';
 
 /** JSDoc */
 interface Report {

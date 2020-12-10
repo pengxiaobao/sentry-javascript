@@ -1,5 +1,5 @@
-import { Event, Exception, StackFrame } from '@sentry/types';
-import { extractExceptionKeysForMessage, isEvent, normalizeToSize } from '@sentry/utils';
+import { Event, Exception, StackFrame } from '@sentry-csii/types';
+import { extractExceptionKeysForMessage, isEvent, normalizeToSize } from '@sentry-csii/utils';
 
 import { computeStackTrace, StackFrame as TraceKitStackFrame, StackTrace as TraceKitStackTrace } from './tracekit';
 

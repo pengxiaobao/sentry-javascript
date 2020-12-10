@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import * as Sentry from '@sentry/browser';
+import * as Sentry from '@sentry-csii/browser';
 import environmentConfig from 'ember-get-config';
 
 /**
@@ -11,7 +11,7 @@ import Application from '../app';
 import config from '../config/environment';
 import { setApplication } from '@ember/test-helpers';
 import { start } from 'ember-qunit';
-import { Transports } from '@sentry/browser';
+import { Transports } from '@sentry-csii/browser';
 import Ember from 'ember';
 
 export class TestFetchTransport extends Transports.FetchTransport {
@@ -27,7 +27,7 @@ export class TestFetchTransport extends Transports.FetchTransport {
   }
 }
 
-environmentConfig['@sentry/ember'].sentry['transport'] = TestFetchTransport;
+environmentConfig['@sentry-csii/ember'].sentry['transport'] = TestFetchTransport;
 
 setApplication(Application.create(config.APP));
 

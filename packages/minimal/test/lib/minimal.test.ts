@@ -1,5 +1,5 @@
-import { getCurrentHub, getHubFromCarrier, Scope } from '@sentry/hub';
-import { Severity } from '@sentry/types';
+import { getCurrentHub, getHubFromCarrier, Scope } from '@sentry-csii/hub';
+import { Severity } from '@sentry-csii/types';
 
 import {
   _callOnClient,

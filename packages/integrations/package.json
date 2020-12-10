@@ -1,5 +1,5 @@
 {
-  "name": "@sentry/integrations",
+  "name": "@sentry-csii/integrations",
   "version": "5.29.0",
   "description": "Pluggable integrations that can be used to enhance JS SDKs",
   "repository": "git://github.com/getsentry/sentry-javascript.git",
@@ -16,13 +16,13 @@
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@sentry/types": "5.29.0",
-    "@sentry/utils": "5.29.0",
+    "@sentry-csii/types": "5.29.0",
+    "@sentry-csii/utils": "5.29.0",
     "localforage": "1.8.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@sentry-internal/eslint-config-sdk": "5.29.0",
+    "@sentry-csii-internal/eslint-config-sdk": "5.29.0",
     "chai": "^4.1.2",
     "eslint": "7.6.0",
     "jest": "^24.7.1",

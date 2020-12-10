@@ -1,8 +1,8 @@
-import * as sentryCore from '@sentry/core';
-import { Hub } from '@sentry/hub';
-import * as sentryHub from '@sentry/hub';
-import { SpanStatus, Transaction } from '@sentry/tracing';
-import { Runtime, Transaction as TransactionType } from '@sentry/types';
+import * as sentryCore from '@sentry-csii/core';
+import { Hub } from '@sentry-csii/hub';
+import * as sentryHub from '@sentry-csii/hub';
+import { SpanStatus, Transaction } from '@sentry-csii/tracing';
+import { Runtime, Transaction as TransactionType } from '@sentry-csii/types';
 import * as http from 'http';
 import * as net from 'net';
 
@@ -228,8 +228,8 @@ describe('tracingHandler', () => {
 
   it('puts its transaction on the scope', () => {
     const hub = new Hub(new NodeClient({ tracesSampleRate: 1.0 }));
-    // we need to mock both of these because the tracing handler relies on `@sentry/core` while the sampler relies on
-    // `@sentry/hub`, and mocking breaks the link between the two
+    // we need to mock both of these because the tracing handler relies on `@sentry-csii/core` while the sampler relies on
+    // `@sentry-csii/hub`, and mocking breaks the link between the two
     jest.spyOn(sentryCore, 'getCurrentHub').mockReturnValue(hub);
     jest.spyOn(sentryHub, 'getCurrentHub').mockReturnValue(hub);
 

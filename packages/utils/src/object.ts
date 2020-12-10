@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ExtendedError, WrappedFunction } from '@sentry/types';
+import { ExtendedError, WrappedFunction } from '@sentry-csii/types';
 
 import { htmlTreeAsString } from './browser';
 import { isElement, isError, isEvent, isInstanceOf, isPlainObject, isPrimitive, isSyntheticEvent } from './is';

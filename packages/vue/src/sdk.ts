@@ -1,9 +1,9 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BrowserClient, BrowserOptions, defaultIntegrations, getCurrentHub } from '@sentry/browser';
-import { initAndBind } from '@sentry/core';
-import { Span, Transaction } from '@sentry/types';
-import { basename, getGlobalObject, logger, timestampWithMs } from '@sentry/utils';
+import { BrowserClient, BrowserOptions, defaultIntegrations, getCurrentHub } from '@sentry-csii/browser';
+import { initAndBind } from '@sentry-csii/core';
+import { Span, Transaction } from '@sentry-csii/types';
+import { basename, getGlobalObject, logger, timestampWithMs } from '@sentry-csii/utils';
 
 import { createVueEventProcessor } from './eventprocessor';
 
@@ -341,7 +341,7 @@ class VueHelper {
     }
 
     this._rootSpanTimer = setTimeout(() => {
-      // We should always finish the span, only should pop activity if using @sentry/apm
+      // We should always finish the span, only should pop activity if using @sentry-csii/apm
       if (this._rootSpan) {
         this._rootSpan.finish(timestamp);
         this._rootSpan = undefined;

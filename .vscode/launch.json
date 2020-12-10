@@ -5,13 +5,13 @@
   "version": "0.2.0",
   // TODO: these are all alike save the package, so figure out how to make that variable
   "configurations": [
-    // @sentry/tracing - run a specific test file in watch mode
+    // @sentry-csii/tracing - run a specific test file in watch mode
     // must have file in currently active tab when hitting the play button
     {
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}/packages/tracing",
-      "name": "Debug @sentry/tracing tests - just open file",
+      "name": "Debug @sentry-csii/tracing tests - just open file",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--watch",
@@ -29,13 +29,13 @@
       "internalConsoleOptions": "neverOpen", // since we're not using it, don't automatically switch to it
     },
 
-    // @sentry/node - run a specific test file in watch mode
+    // @sentry-csii/node - run a specific test file in watch mode
     // must have file in currently active tab when hitting the play button
     {
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}/packages/node",
-      "name": "Debug @sentry/node tests - just open file",
+      "name": "Debug @sentry-csii/node tests - just open file",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--watch",
@@ -53,13 +53,13 @@
       "internalConsoleOptions": "neverOpen", // since we're not using it, don't automatically switch to it
     },
 
-    // @sentry/core - run a specific test file in watch mode
+    // @sentry-csii/core - run a specific test file in watch mode
     // must have file in currently active tab when hitting the play button
     {
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}/packages/core",
-      "name": "Debug @sentry/core tests - just open file",
+      "name": "Debug @sentry-csii/core tests - just open file",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--watch",
@@ -77,13 +77,13 @@
       "internalConsoleOptions": "neverOpen", // since we're not using it, don't automatically switch to it
     },
 
-    // @sentry/utils - run a specific test file in watch mode
+    // @sentry-csii/utils - run a specific test file in watch mode
     // must have file in currently active tab when hitting the play button
     {
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}/packages/utils",
-      "name": "Debug @sentry/utils tests - just open file",
+      "name": "Debug @sentry-csii/utils tests - just open file",
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--watch",

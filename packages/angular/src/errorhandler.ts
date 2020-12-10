@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandler as AngularErrorHandler, Injectable } from '@angular/core';
-import * as Sentry from '@sentry/browser';
+import * as Sentry from '@sentry-csii/browser';
 
 /**
  * Options used to configure the behavior of the Angular ErrorHandler.
@@ -38,7 +38,7 @@ class SentryErrorHandler implements AngularErrorHandler {
           packages: [
             ...((event.sdk && event.sdk.packages) || []),
             {
-              name: 'npm:@sentry/angular',
+              name: 'npm:@sentry-csii/angular',
               version: Sentry.SDK_VERSION,
             },
           ],

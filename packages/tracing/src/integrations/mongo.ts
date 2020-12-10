@@ -1,6 +1,6 @@
-import { Hub } from '@sentry/hub';
-import { EventProcessor, Integration, SpanContext } from '@sentry/types';
-import { dynamicRequire, fill, logger } from '@sentry/utils';
+import { Hub } from '@sentry-csii/hub';
+import { EventProcessor, Integration, SpanContext } from '@sentry-csii/types';
+import { dynamicRequire, fill, logger } from '@sentry-csii/utils';
 
 // This allows us to use the same array for both defaults options and the type itself.
 // (note `as const` at the end to make it a union of string literal types (i.e. "a" | "b" | ... )

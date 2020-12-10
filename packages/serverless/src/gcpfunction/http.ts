@@ -1,5 +1,5 @@
-import { captureException, flush, getCurrentHub, Handlers, startTransaction } from '@sentry/node';
-import { logger, stripUrlQueryAndFragment } from '@sentry/utils';
+import { captureException, flush, getCurrentHub, Handlers, startTransaction } from '@sentry-csii/node';
+import { logger, stripUrlQueryAndFragment } from '@sentry-csii/utils';
 
 import { domainify, getActiveDomain, proxyFunction } from './../utils';
 import { HttpFunction, WrapperOptions } from './general';

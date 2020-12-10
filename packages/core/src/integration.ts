@@ -1,6 +1,6 @@
-import { addGlobalEventProcessor, getCurrentHub } from '@sentry/hub';
-import { Integration, Options } from '@sentry/types';
-import { logger } from '@sentry/utils';
+import { addGlobalEventProcessor, getCurrentHub } from '@sentry-csii/hub';
+import { Integration, Options } from '@sentry-csii/types';
+import { logger } from '@sentry-csii/utils';
 
 export const installedIntegrations: string[] = [];
 

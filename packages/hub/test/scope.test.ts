@@ -1,5 +1,5 @@
-import { Event, EventHint, Severity } from '@sentry/types';
-import { getGlobalObject } from '@sentry/utils';
+import { Event, EventHint, Severity } from '@sentry-csii/types';
+import { getGlobalObject } from '@sentry-csii/utils';
 
 import { addGlobalEventProcessor, Scope } from '../src';
 

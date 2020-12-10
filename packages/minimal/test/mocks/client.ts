@@ -1,4 +1,4 @@
-import { getCurrentHub } from '@sentry/hub';
+import { getCurrentHub } from '@sentry-csii/hub';
 
 export class TestClient {
   public static instance?: TestClient;

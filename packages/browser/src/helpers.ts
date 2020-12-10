@@ -1,6 +1,6 @@
-import { API, captureException, withScope } from '@sentry/core';
-import { DsnLike, Event as SentryEvent, Mechanism, Scope, WrappedFunction } from '@sentry/types';
-import { addExceptionMechanism, addExceptionTypeValue, logger } from '@sentry/utils';
+import { API, captureException, withScope } from '@sentry-csii/core';
+import { DsnLike, Event as SentryEvent, Mechanism, Scope, WrappedFunction } from '@sentry-csii/types';
+import { addExceptionMechanism, addExceptionTypeValue, logger } from '@sentry-csii/utils';
 
 let ignoreOnError: number = 0;
 

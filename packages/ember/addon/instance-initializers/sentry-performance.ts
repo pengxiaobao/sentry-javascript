@@ -2,15 +2,15 @@ import ApplicationInstance from '@ember/application/instance';
 import Ember from 'ember';
 import { run } from '@ember/runloop';
 import environmentConfig from 'ember-get-config';
-import * as Sentry from '@sentry/browser';
-import { Span, Transaction, Integration } from '@sentry/types';
+import * as Sentry from '@sentry-csii/browser';
+import { Span, Transaction, Integration } from '@sentry-csii/types';
 import { EmberRunQueues } from '@ember/runloop/-private/types';
 import { getActiveTransaction } from '..';
-import { timestampWithMs } from '@sentry/utils';
+import { timestampWithMs } from '@sentry-csii/utils';
 import { macroCondition, isTesting } from '@embroider/macros';
 
 export function initialize(appInstance: ApplicationInstance): void {
-  const config = environmentConfig['@sentry/ember'];
+  const config = environmentConfig['@sentry-csii/ember'];
   if (config['disablePerformance']) {
     return;
   }
@@ -32,7 +32,7 @@ function getTransitionInformation(transition: any, router: any) {
 export function _instrumentEmberRouter(
   routerService: any,
   routerMain: any,
-  config: typeof environmentConfig['@sentry/ember'],
+  config: typeof environmentConfig['@sentry-csii/ember'],
   startTransaction: Function,
   startTransactionOnPageLoad?: boolean,
 ) {
@@ -56,7 +56,7 @@ export function _instrumentEmberRouter(
       tags: {
         url,
         toRoute: routeInfo.name,
-        'routing.instrumentation': '@sentry/ember',
+        'routing.instrumentation': '@sentry-csii/ember',
       },
     });
   }
@@ -78,7 +78,7 @@ export function _instrumentEmberRouter(
       tags: {
         fromRoute,
         toRoute,
-        'routing.instrumentation': '@sentry/ember',
+        'routing.instrumentation': '@sentry-csii/ember',
       },
     });
     transitionSpan = activeTransaction.startChild({
@@ -106,7 +106,7 @@ export function _instrumentEmberRouter(
   };
 }
 
-function _instrumentEmberRunloop(config: typeof environmentConfig['@sentry/ember']) {
+function _instrumentEmberRunloop(config: typeof environmentConfig['@sentry-csii/ember']) {
   const { disableRunloopPerformance, minimumRunloopQueueDuration } = config;
   if (disableRunloopPerformance) {
     return;
@@ -227,7 +227,7 @@ function processComponentRenderAfter(
   }
 }
 
-function _instrumentComponents(config: typeof environmentConfig['@sentry/ember']) {
+function _instrumentComponents(config: typeof environmentConfig['@sentry-csii/ember']) {
   const { disableInstrumentComponents, minimumComponentRenderDuration, enableComponentDefinitions } = config;
   if (disableInstrumentComponents) {
     return;
@@ -264,9 +264,9 @@ function _instrumentComponents(config: typeof environmentConfig['@sentry/ember']
   _subscribeToRenderEvents();
 }
 
-function _instrumentInitialLoad(config: typeof environmentConfig['@sentry/ember']) {
-  const startName = '@sentry/ember:initial-load-start';
-  const endName = '@sentry/ember:initial-load-end';
+function _instrumentInitialLoad(config: typeof environmentConfig['@sentry-csii/ember']) {
+  const startName = '@sentry-csii/ember:initial-load-start';
+  const endName = '@sentry-csii/ember:initial-load-end';
 
   const { performance } = window;
   const HAS_PERFORMANCE = performance && performance.clearMarks && performance.clearMeasures;
@@ -287,7 +287,7 @@ function _instrumentInitialLoad(config: typeof environmentConfig['@sentry/ember'
   if (!HAS_PERFORMANCE_TIMING) {
     return;
   }
-  const measureName = '@sentry/ember:initial-load';
+  const measureName = '@sentry-csii/ember:initial-load';
 
   performance.measure(measureName, startName, endName);
   const measures = performance.getEntriesByName(measureName);
@@ -309,10 +309,10 @@ function _instrumentInitialLoad(config: typeof environmentConfig['@sentry/ember'
 }
 
 export async function instrumentForPerformance(appInstance: ApplicationInstance) {
-  const config = environmentConfig['@sentry/ember'];
+  const config = environmentConfig['@sentry-csii/ember'];
   const sentryConfig = config.sentry;
 
-  const tracing = await import('@sentry/tracing');
+  const tracing = await import('@sentry-csii/tracing');
 
   const idleTimeout = config.transitionTimeout || 5000;
 

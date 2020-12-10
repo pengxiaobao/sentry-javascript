@@ -6,7 +6,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  extends: ['@sentry-internal/sdk'],
+  extends: ['@sentry-csii-internal/sdk'],
   ignorePatterns: ['build/**', 'dist/**', 'esm/**', 'examples/**', 'scripts/**'],
   overrides: [
     {

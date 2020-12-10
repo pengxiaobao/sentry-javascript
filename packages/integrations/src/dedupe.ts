@@ -1,4 +1,4 @@
-import { Event, EventProcessor, Exception, Hub, Integration, StackFrame } from '@sentry/types';
+import { Event, EventProcessor, Exception, Hub, Integration, StackFrame } from '@sentry-csii/types';
 
 /** Deduplication filter */
 export class Dedupe implements Integration {

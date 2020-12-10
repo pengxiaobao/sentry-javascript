@@ -27,29 +27,29 @@ targets:
       - algorithm: sha384
         format: base64
     config:
-      canonical: 'npm:@sentry/browser'
+      canonical: 'npm:@sentry-csii/browser'
   - name: registry
     type: sdk
     onlyIfPresent: /^sentry-node-.*\.tgz$/
     config:
-      canonical: 'npm:@sentry/node'
+      canonical: 'npm:@sentry-csii/node'
   - name: registry
     type: sdk
     onlyIfPresent: /^sentry-react-.*\.tgz$/
     config:
-      canonical: 'npm:@sentry/react'
+      canonical: 'npm:@sentry-csii/react'
   - name: registry
     type: sdk
     onlyIfPresent: /^sentry-vue-.*\.tgz$/
     config:
-      canonical: 'npm:@sentry/vue'
+      canonical: 'npm:@sentry-csii/vue'
   - name: registry
     type: sdk
     onlyIfPresent: /^sentry-gatsby-.*\.tgz$/
     config:
-      canonical: 'npm:@sentry/gatsby'
+      canonical: 'npm:@sentry-csii/gatsby'
   - name: registry
     type: sdk
     onlyIfPresent: /^sentry-angular-.*\.tgz$/
     config:
-      canonical: 'npm:@sentry/angular'
+      canonical: 'npm:@sentry-csii/angular'

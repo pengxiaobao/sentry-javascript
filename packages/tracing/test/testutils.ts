@@ -1,11 +1,11 @@
-import { getGlobalObject } from '@sentry/utils';
+import { getGlobalObject } from '@sentry-csii/utils';
 import { JSDOM } from 'jsdom';
 
 /**
  * Injects DOM properties into node global object.
  *
- * Useful for running tests where some of the tested code applies to @sentry/node and some applies to @sentry/browser
- * (e.g. tests in @sentry/tracing or @sentry/hub). Note that not all properties from the browser `window` object are
+ * Useful for running tests where some of the tested code applies to @sentry-csii/node and some applies to @sentry-csii/browser
+ * (e.g. tests in @sentry-csii/tracing or @sentry-csii/hub). Note that not all properties from the browser `window` object are
  * available.
  *
  * @param properties The names of the properties to add

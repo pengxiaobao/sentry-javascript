@@ -4,7 +4,7 @@ In this version upgrade, there are a few breaking changes. This guide should hel
 
 ## Integrations
 
-We moved optional integrations into their own package, called `@sentry/integrations`. Also, we made a few default
+We moved optional integrations into their own package, called `@sentry-csii/integrations`. Also, we made a few default
 integrations now optional. This is probably the biggest breaking change regarding the upgrade.
 
 Integrations that are now opt-in and were default before:
@@ -23,16 +23,16 @@ Integrations that were pluggable/optional before, that also live in this package
 - Transaction (browser/node)
 - Vue (browser)
 
-### How to use `@sentry/integrations`?
+### How to use `@sentry-csii/integrations`?
 
-Lets start with the approach if you install `@sentry/browser` / `@sentry/node` with `npm` or `yarn`.
+Lets start with the approach if you install `@sentry-csii/browser` / `@sentry-csii/node` with `npm` or `yarn`.
 
 Given you have a `Vue` application running, in order to use the `Vue` integration you need to do the following:
 
 With `4.x`:
 
 ```js
-import * as Sentry from '@sentry/browser';
+import * as Sentry from '@sentry-csii/browser';
 
 Sentry.init({
   dsn: '___PUBLIC_DSN___',
@@ -45,11 +45,11 @@ Sentry.init({
 });
 ```
 
-With `5.x` you need to install `@sentry/integrations` and change the import.
+With `5.x` you need to install `@sentry-csii/integrations` and change the import.
 
 ```js
-import * as Sentry from '@sentry/browser';
-import * as Integrations from '@sentry/integrations';
+import * as Sentry from '@sentry-csii/browser';
+import * as Integrations from '@sentry-csii/integrations';
 
 Sentry.init({
   dsn: '___PUBLIC_DSN___',
@@ -126,12 +126,12 @@ this case is the `event_id`, in case the event will not be sent because of filte
 ## `close` vs. `flush`
 
 In `4.x` we had both `close` and `flush` on the `Client` draining the internal queue of events, helpful when you were
-using `@sentry/node` on a serverless infrastructure.
+using `@sentry-csii/node` on a serverless infrastructure.
 
 Now `close` and `flush` work similar, with the difference that if you call `close` in addition to returing a `Promise`
 that you can await it also **disables** the client so it will not send any future events.
 
-# Migrating from `raven-js` to `@sentry/browser`
+# Migrating from `raven-js` to `@sentry-csii/browser`
 
 https://docs.sentry.io/platforms/javascript/#browser-table
 Here are some examples of how the new SDKs work. Please note that the API for all JavaScript SDKs is the same.

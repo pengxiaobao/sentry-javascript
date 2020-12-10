@@ -1,5 +1,5 @@
-import { DsnLike } from '@sentry/types';
-import { Dsn, urlEncode } from '@sentry/utils';
+import { DsnLike } from '@sentry-csii/types';
+import { Dsn, urlEncode } from '@sentry-csii/utils';
 
 const SENTRY_API_VERSION = '7';
 

@@ -1,11 +1,11 @@
-import { TransportOptions } from '@sentry/types';
-import { SentryError } from '@sentry/utils';
+import { TransportOptions } from '@sentry-csii/types';
+import { SentryError } from '@sentry-csii/utils';
 import * as HttpsProxyAgent from 'https-proxy-agent';
 
 import { HTTPSTransport } from '../../src/transports/https';
 
 const mockSetEncoding = jest.fn();
-const dsn = 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry.io:8989/mysubpath/50622';
+const dsn = 'https://9e9fd4523d784609a5fc0ebb1080592f@sentry-csii.io:8989/mysubpath/50622';
 const transportPath = '/mysubpath/api/50622/store/';
 let mockReturnCode = 200;
 let mockHeaders = {};

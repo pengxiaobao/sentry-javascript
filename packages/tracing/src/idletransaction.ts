@@ -1,6 +1,6 @@
-import { Hub } from '@sentry/hub';
-import { TransactionContext } from '@sentry/types';
-import { logger, timestampWithMs } from '@sentry/utils';
+import { Hub } from '@sentry-csii/hub';
+import { TransactionContext } from '@sentry-csii/types';
+import { logger, timestampWithMs } from '@sentry-csii/utils';
 
 import { Span, SpanRecorder } from './span';
 import { SpanStatus } from './spanstatus';

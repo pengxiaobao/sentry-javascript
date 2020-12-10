@@ -17,7 +17,7 @@ export {
   setUser,
   startTransaction,
   withScope,
-} from '@sentry/browser';
+} from '@sentry-csii/browser';
 
 export { init } from './sdk';
 export { vueRouterInstrumentation } from './vuerouter';

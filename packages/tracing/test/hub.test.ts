@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/unbound-method */
-import { BrowserClient } from '@sentry/browser';
-import { getMainCarrier, Hub } from '@sentry/hub';
-import * as hubModule from '@sentry/hub';
-import * as utilsModule from '@sentry/utils'; // for mocking
-import { getGlobalObject, isNodeEnv, logger } from '@sentry/utils';
+import { BrowserClient } from '@sentry-csii/browser';
+import { getMainCarrier, Hub } from '@sentry-csii/hub';
+import * as hubModule from '@sentry-csii/hub';
+import * as utilsModule from '@sentry-csii/utils'; // for mocking
+import { getGlobalObject, isNodeEnv, logger } from '@sentry-csii/utils';
 import * as nodeHttpModule from 'http';
 
 import { BrowserTracing } from '../src/browser/browsertracing';
@@ -92,7 +92,7 @@ describe('Hub', () => {
           active: { members: [mockRequestObject, mockResponseObject] },
         };
 
-        // Ideally we'd use a NodeClient here, but @sentry/tracing can't depend on @sentry/node since the reverse is
+        // Ideally we'd use a NodeClient here, but @sentry-csii/tracing can't depend on @sentry-csii/node since the reverse is
         // already true (node's request handlers start their own transactions) - even as a dev dependency. Fortunately,
         // we're not relying on anything other than the client having a captureEvent method, which all clients do (it's
         // in the abstract base class), so a BrowserClient will do.

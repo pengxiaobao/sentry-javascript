@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { getCurrentHub } from '@sentry/core';
-import { Event, Integration, Severity } from '@sentry/types';
+import { getCurrentHub } from '@sentry-csii/core';
+import { Event, Integration, Severity } from '@sentry-csii/types';
 import {
   addExceptionMechanism,
   addInstrumentationHandler,
@@ -9,7 +9,7 @@ import {
   isPrimitive,
   isString,
   logger,
-} from '@sentry/utils';
+} from '@sentry-csii/utils';
 
 import { eventFromUnknownInput } from '../eventbuilder';
 import { shouldIgnoreOnError } from '../helpers';

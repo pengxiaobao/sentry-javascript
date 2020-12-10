@@ -16,8 +16,8 @@ assignees: ''
 
 ## Package + Version
 
-- [ ] `@sentry/browser`
-- [ ] `@sentry/node`
+- [ ] `@sentry-csii/browser`
+- [ ] `@sentry-csii/node`
 - [ ] `raven-js`
 - [ ] `raven-node` _(raven for node)_
 - [ ] other:

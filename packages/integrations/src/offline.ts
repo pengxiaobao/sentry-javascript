@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { Event, EventProcessor, Hub, Integration } from '@sentry/types';
-import { getGlobalObject, logger, uuid4 } from '@sentry/utils';
+import { Event, EventProcessor, Hub, Integration } from '@sentry-csii/types';
+import { getGlobalObject, logger, uuid4 } from '@sentry-csii/utils';
 import * as localForageType from 'localforage';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires

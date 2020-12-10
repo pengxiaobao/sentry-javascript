@@ -1,6 +1,6 @@
-import { getCurrentHub } from '@sentry/node';
-import { Integration, Span, Transaction } from '@sentry/types';
-import { fill } from '@sentry/utils';
+import { getCurrentHub } from '@sentry-csii/node';
+import { Integration, Span, Transaction } from '@sentry-csii/types';
+import { fill } from '@sentry-csii/utils';
 // 'aws-sdk/global' import is expected to be type-only so it's erased in the final .js file.
 // When TypeScript compiler is upgraded, use `import type` syntax to explicitly assert that we don't want to load a module here.
 import * as AWS from 'aws-sdk/global';

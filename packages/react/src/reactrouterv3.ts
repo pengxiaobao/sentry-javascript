@@ -1,5 +1,5 @@
-import { Transaction, TransactionContext } from '@sentry/types';
-import { getGlobalObject } from '@sentry/utils';
+import { Transaction, TransactionContext } from '@sentry-csii/types';
+import { getGlobalObject } from '@sentry-csii/utils';
 
 import { Location, ReactRouterInstrumentation } from './types';
 

@@ -3,7 +3,7 @@ import { SinonStub, stub } from 'sinon';
 
 import { Event, Status, Transports } from '../../../src';
 
-const testDsn = 'https://123@sentry.io/42';
+const testDsn = 'https://123@sentry-csii.io/42';
 const storeUrl = 'https://sentry.io/api/42/store/?sentry_key=123&sentry_version=7';
 const eventPayload: Event = {
   event_id: '1337',

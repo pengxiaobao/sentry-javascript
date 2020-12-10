@@ -101,7 +101,7 @@ describe('Dsn', () => {
 
   describe('fromString', () => {
     test('parses a valid full Dsn', () => {
-      const dsn = new Dsn('https://abc:xyz@sentry.io:1234/123');
+      const dsn = new Dsn('https://abc:xyz@sentry-csii.io:1234/123');
       expect(dsn.protocol).toBe('https');
       expect(dsn.user).toBe('abc');
       expect(dsn.pass).toBe('xyz');
@@ -112,7 +112,7 @@ describe('Dsn', () => {
     });
 
     test('parses a valid partial Dsn', () => {
-      const dsn = new Dsn('https://abc@sentry.io/123/321');
+      const dsn = new Dsn('https://abc@sentry-csii.io/123/321');
       expect(dsn.protocol).toBe('https');
       expect(dsn.user).toBe('abc');
       expect(dsn.pass).toBe('');
@@ -123,7 +123,7 @@ describe('Dsn', () => {
     });
 
     test('with a long path', () => {
-      const dsn = new Dsn('https://abc@sentry.io/sentry/custom/installation/321');
+      const dsn = new Dsn('https://abc@sentry-csii.io/sentry/custom/installation/321');
       expect(dsn.protocol).toBe('https');
       expect(dsn.user).toBe('abc');
       expect(dsn.pass).toBe('');
@@ -134,7 +134,7 @@ describe('Dsn', () => {
     });
 
     test('with a query string', () => {
-      const dsn = new Dsn('https://abc@sentry.io/321?sample.rate=0.1&other=value');
+      const dsn = new Dsn('https://abc@sentry-csii.io/321?sample.rate=0.1&other=value');
       expect(dsn.protocol).toBe('https');
       expect(dsn.user).toBe('abc');
       expect(dsn.pass).toBe('');
@@ -149,43 +149,43 @@ describe('Dsn', () => {
     });
 
     test('throws without mandatory fields', () => {
-      expect(() => new Dsn('://abc@sentry.io/123')).toThrow(SentryError);
-      expect(() => new Dsn('https://@sentry.io/123')).toThrow(SentryError);
+      expect(() => new Dsn('://abc@sentry-csii.io/123')).toThrow(SentryError);
+      expect(() => new Dsn('https://@sentry-csii.io/123')).toThrow(SentryError);
       expect(() => new Dsn('https://abc@123')).toThrow(SentryError);
-      expect(() => new Dsn('https://abc@sentry.io/')).toThrow(SentryError);
+      expect(() => new Dsn('https://abc@sentry-csii.io/')).toThrow(SentryError);
     });
 
     test('throws for invalid fields', () => {
-      expect(() => new Dsn('httpx://abc@sentry.io/123')).toThrow(SentryError);
-      expect(() => new Dsn('httpx://abc@sentry.io:xxx/123')).toThrow(SentryError);
-      expect(() => new Dsn('http://abc@sentry.io/abc')).toThrow(SentryError);
+      expect(() => new Dsn('httpx://abc@sentry-csii.io/123')).toThrow(SentryError);
+      expect(() => new Dsn('httpx://abc@sentry-csii.io:xxx/123')).toThrow(SentryError);
+      expect(() => new Dsn('http://abc@sentry-csii.io/abc')).toThrow(SentryError);
     });
   });
 
   describe('toString', () => {
     test('excludes the password by default', () => {
-      const dsn = new Dsn('https://abc:xyz@sentry.io:1234/123');
-      expect(dsn.toString()).toBe('https://abc@sentry.io:1234/123');
+      const dsn = new Dsn('https://abc:xyz@sentry-csii.io:1234/123');
+      expect(dsn.toString()).toBe('https://abc@sentry-csii.io:1234/123');
     });
 
     test('optionally includes the password', () => {
-      const dsn = new Dsn('https://abc:xyz@sentry.io:1234/123');
-      expect(dsn.toString(true)).toBe('https://abc:xyz@sentry.io:1234/123');
+      const dsn = new Dsn('https://abc:xyz@sentry-csii.io:1234/123');
+      expect(dsn.toString(true)).toBe('https://abc:xyz@sentry-csii.io:1234/123');
     });
 
     test('renders no password if missing', () => {
-      const dsn = new Dsn('https://abc@sentry.io:1234/123');
-      expect(dsn.toString(true)).toBe('https://abc@sentry.io:1234/123');
+      const dsn = new Dsn('https://abc@sentry-csii.io:1234/123');
+      expect(dsn.toString(true)).toBe('https://abc@sentry-csii.io:1234/123');
     });
 
     test('renders no port if missing', () => {
-      const dsn = new Dsn('https://abc@sentry.io/123');
-      expect(dsn.toString()).toBe('https://abc@sentry.io/123');
+      const dsn = new Dsn('https://abc@sentry-csii.io/123');
+      expect(dsn.toString()).toBe('https://abc@sentry-csii.io/123');
     });
 
     test('renders the full path correctly', () => {
-      const dsn = new Dsn('https://abc@sentry.io/sentry/custom/installation/321');
-      expect(dsn.toString()).toBe('https://abc@sentry.io/sentry/custom/installation/321');
+      const dsn = new Dsn('https://abc@sentry-csii.io/sentry/custom/installation/321');
+      expect(dsn.toString()).toBe('https://abc@sentry-csii.io/sentry/custom/installation/321');
     });
   });
 });

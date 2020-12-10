@@ -1,6 +1,6 @@
-import { getCurrentHub } from '@sentry/hub';
-import { Client, Options } from '@sentry/types';
-import { logger } from '@sentry/utils';
+import { getCurrentHub } from '@sentry-csii/hub';
+import { Client, Options } from '@sentry-csii/types';
+import { logger } from '@sentry-csii/utils';
 
 /** A class object that can instantiate Client objects. */
 export type ClientClass<F extends Client, O extends Options> = new (options: O) => F;

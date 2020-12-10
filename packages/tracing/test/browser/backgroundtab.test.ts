@@ -1,5 +1,5 @@
-import { BrowserClient } from '@sentry/browser';
-import { Hub, makeMain } from '@sentry/hub';
+import { BrowserClient } from '@sentry-csii/browser';
+import { Hub, makeMain } from '@sentry-csii/hub';
 import { JSDOM } from 'jsdom';
 
 import { SpanStatus } from '../../src';

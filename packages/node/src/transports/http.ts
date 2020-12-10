@@ -1,5 +1,5 @@
-import { Event, Response, TransportOptions } from '@sentry/types';
-import { SentryError } from '@sentry/utils';
+import { Event, Response, TransportOptions } from '@sentry-csii/types';
+import { SentryError } from '@sentry-csii/utils';
 import * as http from 'http';
 
 import { BaseTransport } from './base';

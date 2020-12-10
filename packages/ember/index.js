@@ -14,7 +14,7 @@ module.exports = {
   },
 
   contentFor(type, config) {
-    const addonConfig = config['@sentry/ember'] || {};
+    const addonConfig = config['@sentry-csii/ember'] || {};
     const { disablePerformance, disableInitialLoadInstrumentation } = addonConfig;
     if (disablePerformance || disableInitialLoadInstrumentation) {
       return;

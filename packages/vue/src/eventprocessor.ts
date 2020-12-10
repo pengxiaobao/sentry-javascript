@@ -1,8 +1,8 @@
-import { addGlobalEventProcessor, SDK_VERSION } from '@sentry/browser';
+import { addGlobalEventProcessor, SDK_VERSION } from '@sentry-csii/browser';
 
 /**
  * A global side effect that makes sure Sentry events that user
- * `@sentry/react` will correctly have Sentry events associated
+ * `@sentry-csii/react` will correctly have Sentry events associated
  * with it.
  */
 export function createVueEventProcessor(): void {
@@ -13,7 +13,7 @@ export function createVueEventProcessor(): void {
       packages: [
         ...((event.sdk && event.sdk.packages) || []),
         {
-          name: 'npm:@sentry/vue',
+          name: 'npm:@sentry-csii/vue',
           version: SDK_VERSION,
         },
       ],

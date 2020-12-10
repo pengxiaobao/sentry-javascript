@@ -1,4 +1,4 @@
-const origSentry = jest.requireActual('@sentry/node');
+const origSentry = jest.requireActual('@sentry-csii/node');
 export const defaultIntegrations = origSentry.defaultIntegrations; // eslint-disable-line @typescript-eslint/no-unsafe-member-access
 export const Handlers = origSentry.Handlers; // eslint-disable-line @typescript-eslint/no-unsafe-member-access
 export const SDK_VERSION = '6.6.6';

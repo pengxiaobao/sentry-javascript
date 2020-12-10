@@ -1,4 +1,4 @@
-import { Event, EventProcessor, Hub, Integration } from '@sentry/types';
+import { Event, EventProcessor, Hub, Integration } from '@sentry-csii/types';
 
 /** This function adds duration since Sentry was initialized till the time event was sent */
 export class SessionTiming implements Integration {

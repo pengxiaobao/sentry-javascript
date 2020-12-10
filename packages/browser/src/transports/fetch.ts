@@ -1,6 +1,6 @@
-import { eventToSentryRequest, sessionToSentryRequest } from '@sentry/core';
-import { Event, Response, SentryRequest, Session } from '@sentry/types';
-import { getGlobalObject, supportsReferrerPolicy, SyncPromise } from '@sentry/utils';
+import { eventToSentryRequest, sessionToSentryRequest } from '@sentry-csii/core';
+import { Event, Response, SentryRequest, Session } from '@sentry-csii/types';
+import { getGlobalObject, supportsReferrerPolicy, SyncPromise } from '@sentry-csii/utils';
 
 import { BaseTransport } from './base';
 

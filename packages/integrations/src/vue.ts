@@ -1,19 +1,19 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { EventProcessor, Hub, Integration, IntegrationClass, Scope, Span, Transaction } from '@sentry/types';
-import { basename, getGlobalObject, logger, timestampWithMs } from '@sentry/utils';
+import { EventProcessor, Hub, Integration, IntegrationClass, Scope, Span, Transaction } from '@sentry-csii/types';
+import { basename, getGlobalObject, logger, timestampWithMs } from '@sentry-csii/utils';
 
 /**
  * Used to extract Tracing integration from the current client,
- * without the need to import `Tracing` itself from the @sentry/apm package.
- * @deprecated as @sentry/tracing should be used over @sentry/apm.
+ * without the need to import `Tracing` itself from the @sentry-csii/apm package.
+ * @deprecated as @sentry-csii/tracing should be used over @sentry-csii/apm.
  */
 const TRACING_GETTER = ({
   id: 'Tracing',
 } as any) as IntegrationClass<Integration>;
 
 /**
- * Used to extract BrowserTracing integration from @sentry/tracing
+ * Used to extract BrowserTracing integration from @sentry-csii/tracing
  */
 const BROWSER_TRACING_GETTER = ({
   id: 'BrowserTracing',
@@ -154,7 +154,7 @@ export class Vue implements Integration {
   public constructor(
     options: Partial<Omit<IntegrationOptions, 'tracingOptions'> & { tracingOptions: Partial<TracingOptions> }>,
   ) {
-    logger.log('You are still using the Vue.js integration, consider moving to @sentry/vue');
+    logger.log('You are still using the Vue.js integration, consider moving to @sentry-csii/vue');
     this._options = {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       Vue: getGlobalObject<any>().Vue,
@@ -257,7 +257,7 @@ export class Vue implements Integration {
           // Create an activity on the first event call. There'll be no second call, as rootSpan will be in place,
           // thus new event handler won't be attached.
 
-          // We do this whole dance with `TRACING_GETTER` to prevent `@sentry/apm` from becoming a peerDependency.
+          // We do this whole dance with `TRACING_GETTER` to prevent `@sentry-csii/apm` from becoming a peerDependency.
           // We also need to ask for the `.constructor`, as `pushActivity` and `popActivity` are static, not instance methods.
           /* eslint-disable @typescript-eslint/no-unsafe-member-access */
           // eslint-disable-next-line deprecation/deprecation
@@ -271,7 +271,7 @@ export class Vue implements Integration {
                 op: 'Vue',
               });
             }
-            // Use functionality from @sentry/tracing
+            // Use functionality from @sentry-csii/tracing
           } else {
             const activeTransaction = getActiveTransaction(getCurrentHub());
             if (activeTransaction) {
@@ -352,7 +352,7 @@ export class Vue implements Integration {
 
     this._rootSpanTimer = setTimeout(() => {
       if (this._tracingActivity) {
-        // We do this whole dance with `TRACING_GETTER` to prevent `@sentry/apm` from becoming a peerDependency.
+        // We do this whole dance with `TRACING_GETTER` to prevent `@sentry-csii/apm` from becoming a peerDependency.
         // We also need to ask for the `.constructor`, as `pushActivity` and `popActivity` are static, not instance methods.
         // eslint-disable-next-line deprecation/deprecation
         const tracingIntegration = getCurrentHub().getIntegration(TRACING_GETTER);
@@ -362,7 +362,7 @@ export class Vue implements Integration {
         }
       }
 
-      // We should always finish the span, only should pop activity if using @sentry/apm
+      // We should always finish the span, only should pop activity if using @sentry-csii/apm
       if (this._rootSpan) {
         this._rootSpan.finish(timestamp);
       }

@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: ['prettier', 'eslint:recommended', 'plugin:import/errors', 'plugin:import/warnings'],
-  plugins: ['@sentry-internal/eslint-plugin-sdk', 'simple-import-sort'],
+  plugins: ['@sentry-csii-internal/eslint-plugin-sdk', 'simple-import-sort'],
   overrides: [
     {
       // Configuration for JavaScript files
@@ -105,7 +105,7 @@ module.exports = {
       files: ['src/**/*'],
       rules: {
         // We want to prevent async await usage in our files to prevent uncessary bundle size.
-        '@sentry-internal/sdk/no-async-await': 'error',
+        '@sentry-csii-internal/sdk/no-async-await': 'error',
 
         // JSDOC comments are required for classes and methods. As we have a public facing codebase, documentation,
         // even if it may seems excessive at times, is important to emphasize. Turned off in tests.

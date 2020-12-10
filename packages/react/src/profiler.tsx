@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { getCurrentHub, Hub } from '@sentry/browser';
-import { Integration, IntegrationClass, Span, Transaction } from '@sentry/types';
-import { timestampWithMs } from '@sentry/utils';
+import { getCurrentHub, Hub } from '@sentry-csii/browser';
+import { Integration, IntegrationClass, Span, Transaction } from '@sentry-csii/types';
+import { timestampWithMs } from '@sentry-csii/utils';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import * as React from 'react';
 
@@ -12,7 +12,7 @@ const TRACING_GETTER = ({
 } as any) as IntegrationClass<Integration>;
 
 let globalTracingIntegration: Integration | null = null;
-/** @deprecated remove when @sentry/apm no longer used */
+/** @deprecated remove when @sentry-csii/apm no longer used */
 const getTracingIntegration = (): Integration | null => {
   if (globalTracingIntegration) {
     return globalTracingIntegration;
@@ -26,7 +26,7 @@ const getTracingIntegration = (): Integration | null => {
  * pushActivity creates an new react activity.
  * Is a no-op if Tracing integration is not valid
  * @param name displayName of component that started activity
- * @deprecated remove when @sentry/apm no longer used
+ * @deprecated remove when @sentry-csii/apm no longer used
  */
 function pushActivity(name: string, op: string): number | null {
   if (globalTracingIntegration === null) {
@@ -43,7 +43,7 @@ function pushActivity(name: string, op: string): number | null {
  * popActivity removes a React activity.
  * Is a no-op if Tracing integration is not valid.
  * @param activity id of activity that is being popped
- * @deprecated remove when @sentry/apm no longer used
+ * @deprecated remove when @sentry-csii/apm no longer used
  */
 function popActivity(activity: number | null): void {
   if (activity === null || globalTracingIntegration === null) {
@@ -57,7 +57,7 @@ function popActivity(activity: number | null): void {
  * Obtain a span given an activity id.
  * Is a no-op if Tracing integration is not valid.
  * @param activity activity id associated with obtained span
- * @deprecated remove when @sentry/apm no longer used
+ * @deprecated remove when @sentry-csii/apm no longer used
  */
 function getActivitySpan(activity: number | null): Span | undefined {
   if (activity === null || globalTracingIntegration === null) {
@@ -106,7 +106,7 @@ class Profiler extends React.Component<ProfilerProps> {
       return;
     }
 
-    // If they are using @sentry/apm, we need to push/pop activities
+    // If they are using @sentry-csii/apm, we need to push/pop activities
     // eslint-disable-next-line deprecation/deprecation
     if (getTracingIntegration()) {
       // eslint-disable-next-line deprecation/deprecation

@@ -1,6 +1,6 @@
-import { getCurrentHub, initAndBind, Integrations as CoreIntegrations } from '@sentry/core';
-import { getMainCarrier, setHubOnCarrier } from '@sentry/hub';
-import { getGlobalObject } from '@sentry/utils';
+import { getCurrentHub, initAndBind, Integrations as CoreIntegrations } from '@sentry-csii/core';
+import { getMainCarrier, setHubOnCarrier } from '@sentry-csii/hub';
+import { getGlobalObject } from '@sentry-csii/utils';
 import * as domain from 'domain';
 
 import { NodeOptions } from './backend';
@@ -31,7 +31,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * const { init } = require('@sentry/node');
+ * const { init } = require('@sentry-csii/node');
  *
  * init({
  *   dsn: '__DSN__',
@@ -42,7 +42,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * const { configureScope } = require('@sentry/node');
+ * const { configureScope } = require('@sentry-csii/node');
  * configureScope((scope: Scope) => {
  *   scope.setExtra({ battery: 0.7 });
  *   scope.setTag({ user_mode: 'admin' });
@@ -53,7 +53,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * const { addBreadcrumb } = require('@sentry/node');
+ * const { addBreadcrumb } = require('@sentry-csii/node');
  * addBreadcrumb({
  *   message: 'My Breadcrumb',
  *   // ...
@@ -63,7 +63,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * const Sentry = require('@sentry/node');
+ * const Sentry = require('@sentry-csii/node');
  * Sentry.captureMessage('Hello, world!');
  * Sentry.captureException(new Error('Good bye'));
  * Sentry.captureEvent({

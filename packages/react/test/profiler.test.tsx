@@ -1,4 +1,4 @@
-import { SpanContext } from '@sentry/types';
+import { SpanContext } from '@sentry-csii/types';
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 import * as React from 'react';
@@ -24,7 +24,7 @@ class MockSpan {
 
 let activeTransaction: Record<string, any>;
 
-jest.mock('@sentry/browser', () => ({
+jest.mock('@sentry-csii/browser', () => ({
   getCurrentHub: () => ({
     getIntegration: () => undefined,
     getScope: () => ({

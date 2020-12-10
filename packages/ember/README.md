@@ -14,18 +14,18 @@
 
 ## General
 
-This package is an Ember addon that wraps `@sentry/browser`, with added functionality related to Ember. All methods available in
-`@sentry/browser` can be imported from `@sentry/ember`.
+This package is an Ember addon that wraps `@sentry-csii/browser`, with added functionality related to Ember. All methods available in
+`@sentry-csii/browser` can be imported from `@sentry-csii/ember`.
 
 ### Installation
 
 As with other Ember addons, run:
-`ember install @sentry/ember`
+`ember install @sentry-csii/ember`
 
 Then add the following config to `config/environment.js`
 
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     sentry: {
       dsn: '__DSN__' // replace __DSN__ with your DSN,
       tracesSampleRate: 1.0, // Be sure to lower this for your production environment
@@ -41,7 +41,7 @@ import Application from '@ember/application';
 import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
-import { InitSentryForEmber } from '@sentry/ember';
+import { InitSentryForEmber } from '@sentry-csii/ember';
 
 InitSentryForEmber();
 
@@ -54,10 +54,10 @@ export default class App extends Application {
 
 ### Additional Configuration
 
-Aside from configuration passed from this addon into `@sentry/browser` via the `sentry` property, there is also the following Ember specific configuration.
+Aside from configuration passed from this addon into `@sentry-csii/browser` via the `sentry` property, there is also the following Ember specific configuration.
 
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     ignoreEmberOnErrorWarning: false, // Will silence Ember.onError warning without the need of using Ember debugging tools. False by default.
     sentry: ... // See sentry-javascript configuration https://docs.sentry.io/error-reporting/configuration/?platform=javascript
   };
@@ -65,10 +65,10 @@ Aside from configuration passed from this addon into `@sentry/browser` via the `
 
 #### Disabling Performance
 
-`@sentry/ember` captures performance by default, if you would like to disable the automatic performance instrumentation, you can add the following to your `config/environment.js`:
+`@sentry-csii/ember` captures performance by default, if you would like to disable the automatic performance instrumentation, you can add the following to your `config/environment.js`:
 
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     disablePerformance: true, // Will disable automatic instrumentation of performance. Manual instrumentation will still be sent.
     sentry: ... // See sentry-javascript configuration https://docs.sentry.io/error-reporting/configuration/?platform=javascript
   };
@@ -82,7 +82,7 @@ you can import `instrumentRoutePerformance` and wrap your route with it.
 
 ```javascript
 import Route from '@ember/routing/route';
-import { instrumentRoutePerformance } from '@sentry/ember';
+import { instrumentRoutePerformance } from '@sentry-csii/ember';
 
 class MyRoute extends Route {
   model() {
@@ -100,7 +100,7 @@ such as when using glimmer components.
 
 If you would like to change the runloop queue threshold, add the following to your config:
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     minimumRunloopQueueDuration: 0, // All runloop queue durations will be added as spans.
   };
 ```
@@ -110,7 +110,7 @@ Non-glimmer component render times will automatically get captured.
 
 If you would like to disable component render being instrumented, add the following to your config:
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     disableInstrumentComponents: true, // Will disable automatic instrumentation for components.
   };
 ```
@@ -118,7 +118,7 @@ If you would like to disable component render being instrumented, add the follow
 Additionally, components whose render time is below a threshold (by default 2ms) will not be included as spans.
 If you would like to change this threshold, add the following to your config:
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     minimumComponentRenderDuration: 0, // All (non-glimmer) component render durations will be added as spans.
   };
 ```
@@ -128,18 +128,18 @@ Currently glimmer component render durations can only be captured indirectly via
 optionally enable a setting to show component definitions (which will indicate which components are being rendered) be
 adding the following to your config:
 ```javascript
-  ENV['@sentry/ember'] = {
+  ENV['@sentry-csii/ember'] = {
     enableComponentDefinition: true, // All component definitions will be added as spans.
   };
 ```
 
 ### Supported Versions
 
-`@sentry/ember` currently supports Ember **3.8+** for error monitoring.
+`@sentry-csii/ember` currently supports Ember **3.8+** for error monitoring.
 
 ### Previous Integration
 
-Previously we've recommended using the Ember integration from `@sentry/integrations` but moving forward we will be using
+Previously we've recommended using the Ember integration from `@sentry-csii/integrations` but moving forward we will be using
 this Ember addon to offer more Ember-specific error and performancing monitoring.
 
 ## Testing

@@ -13,7 +13,7 @@ export {
   Status,
   Thread,
   User,
-} from '@sentry/types';
+} from '@sentry-csii/types';
 
 export {
   addGlobalEventProcessor,
@@ -35,15 +35,15 @@ export {
   setTags,
   setUser,
   withScope,
-} from '@sentry/core';
+} from '@sentry-csii/core';
 
 export { NodeBackend, NodeOptions } from './backend';
 export { NodeClient } from './client';
 export { defaultIntegrations, init, lastEventId, flush, close } from './sdk';
 export { SDK_NAME, SDK_VERSION } from './version';
 
-import { Integrations as CoreIntegrations } from '@sentry/core';
-import { getMainCarrier } from '@sentry/hub';
+import { Integrations as CoreIntegrations } from '@sentry-csii/core';
+import { getMainCarrier } from '@sentry-csii/hub';
 import * as domain from 'domain';
 
 import * as Handlers from './handlers';
@@ -58,7 +58,7 @@ const INTEGRATIONS = {
 export { INTEGRATIONS as Integrations, Transports, Handlers };
 
 // We need to patch domain on the global __SENTRY__ object to make it work for node in cross-platform packages like
-// @sentry/hub. If we don't do this, browser bundlers will have troubles resolving `require('domain')`.
+// @sentry-csii/hub. If we don't do this, browser bundlers will have troubles resolving `require('domain')`.
 const carrier = getMainCarrier();
 if (carrier.__SENTRY__) {
   carrier.__SENTRY__.extensions = carrier.__SENTRY__.extensions || {};

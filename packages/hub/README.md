@@ -7,9 +7,9 @@
 
 # Sentry JavaScript SDK Hub
 
-[![npm version](https://img.shields.io/npm/v/@sentry/hub.svg)](https://www.npmjs.com/package/@sentry/hub)
-[![npm dm](https://img.shields.io/npm/dm/@sentry/hub.svg)](https://www.npmjs.com/package/@sentry/hub)
-[![npm dt](https://img.shields.io/npm/dt/@sentry/hub.svg)](https://www.npmjs.com/package/@sentry/hub)
+[![npm version](https://img.shields.io/npm/v/@sentry-csii/hub.svg)](https://www.npmjs.com/package/@sentry-csii/hub)
+[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/hub.svg)](https://www.npmjs.com/package/@sentry-csii/hub)
+[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/hub.svg)](https://www.npmjs.com/package/@sentry-csii/hub)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links

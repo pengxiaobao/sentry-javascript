@@ -22,7 +22,7 @@ module.exports = {
   overrides: [
     {
       files: ['addon/**'],
-      plugins: ['@sentry-internal/eslint-plugin-sdk'],
+      plugins: ['@sentry-csii-internal/eslint-plugin-sdk'],
     },
     // node files
     {

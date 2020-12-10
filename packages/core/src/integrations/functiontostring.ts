@@ -1,4 +1,4 @@
-import { Integration, WrappedFunction } from '@sentry/types';
+import { Integration, WrappedFunction } from '@sentry-csii/types';
 
 let originalFunctionToString: () => void;
 

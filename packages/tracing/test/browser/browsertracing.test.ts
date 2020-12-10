@@ -1,5 +1,5 @@
-import { BrowserClient } from '@sentry/browser';
-import { Hub, makeMain } from '@sentry/hub';
+import { BrowserClient } from '@sentry-csii/browser';
+import { Hub, makeMain } from '@sentry-csii/hub';
 import { JSDOM } from 'jsdom';
 
 import { SpanStatus } from '../../src';
@@ -18,8 +18,8 @@ import { getActiveTransaction, secToMs } from '../../src/utils';
 
 let mockChangeHistory: ({ to, from }: { to: string; from?: string }) => void = () => undefined;
 
-jest.mock('@sentry/utils', () => {
-  const actual = jest.requireActual('@sentry/utils');
+jest.mock('@sentry-csii/utils', () => {
+  const actual = jest.requireActual('@sentry-csii/utils');
   return {
     ...actual,
     addInstrumentationHandler: ({ callback, type }: any): void => {
@@ -30,7 +30,7 @@ jest.mock('@sentry/utils', () => {
   };
 });
 
-const { logger } = jest.requireActual('@sentry/utils');
+const { logger } = jest.requireActual('@sentry-csii/utils');
 const warnSpy = jest.spyOn(logger, 'warn');
 
 beforeAll(() => {

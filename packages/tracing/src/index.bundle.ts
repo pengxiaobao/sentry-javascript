@@ -11,7 +11,7 @@ export {
   Status,
   Thread,
   User,
-} from '@sentry/types';
+} from '@sentry-csii/types';
 
 export {
   addGlobalEventProcessor,
@@ -33,10 +33,10 @@ export {
   startTransaction,
   Transports,
   withScope,
-} from '@sentry/browser';
+} from '@sentry-csii/browser';
 
-export { BrowserOptions } from '@sentry/browser';
-export { BrowserClient, ReportDialogOptions } from '@sentry/browser';
+export { BrowserOptions } from '@sentry-csii/browser';
+export { BrowserClient, ReportDialogOptions } from '@sentry-csii/browser';
 export {
   defaultIntegrations,
   forceLoad,
@@ -47,11 +47,11 @@ export {
   flush,
   close,
   wrap,
-} from '@sentry/browser';
-export { SDK_NAME, SDK_VERSION } from '@sentry/browser';
+} from '@sentry-csii/browser';
+export { SDK_NAME, SDK_VERSION } from '@sentry-csii/browser';
 
-import { Integrations as BrowserIntegrations } from '@sentry/browser';
-import { getGlobalObject } from '@sentry/utils';
+import { Integrations as BrowserIntegrations } from '@sentry-csii/browser';
+import { getGlobalObject } from '@sentry-csii/utils';
 
 import { BrowserTracing } from './browser';
 import { addExtensionMethods } from './hubextensions';

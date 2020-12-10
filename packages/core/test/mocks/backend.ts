@@ -1,5 +1,5 @@
-import { Event, Options, Severity, Transport } from '@sentry/types';
-import { SyncPromise } from '@sentry/utils';
+import { Event, Options, Severity, Transport } from '@sentry-csii/types';
+import { SyncPromise } from '@sentry-csii/utils';
 
 import { BaseBackend } from '../../src/basebackend';
 

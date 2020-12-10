@@ -1,4 +1,4 @@
-import { StackFrame } from '@sentry/types';
+import { StackFrame } from '@sentry-csii/types';
 
 import {
   addContextToFrame,

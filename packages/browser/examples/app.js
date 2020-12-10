@@ -33,7 +33,7 @@ class HappyTransport extends Sentry.Transports.BaseTransport {
 
 Sentry.init({
   // Client's DSN.
-  dsn: 'https://363a337c11a64611be4845ad6e24f3ac@sentry.io/297378',
+  dsn: 'https://363a337c11a64611be4845ad6e24f3ac@sentry-csii.io/297378',
   // An array of strings or regexps that'll be used to ignore specific errors based on their type/message
   ignoreErrors: [/PickleRick_\d\d/, 'RangeError'],
   // An array of strings or regexps that'll be used to ignore specific errors based on their origin url

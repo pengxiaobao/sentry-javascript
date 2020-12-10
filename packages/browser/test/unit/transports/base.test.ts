@@ -2,7 +2,7 @@ import { expect } from 'chai';
 
 import { BaseTransport } from '../../../src/transports/base';
 
-const testDsn = 'https://123@sentry.io/42';
+const testDsn = 'https://123@sentry-csii.io/42';
 
 class SimpleTransport extends BaseTransport {}
 

@@ -1,4 +1,4 @@
-import { Client, Integration } from '@sentry/types';
+import { Client, Integration } from '@sentry-csii/types';
 
 import { installedIntegrations } from '../../src/integration';
 import { initAndBind } from '../../src/sdk';
@@ -9,7 +9,7 @@ declare var global: any;
 
 const PUBLIC_DSN = 'https://username@domain/123';
 
-jest.mock('@sentry/hub', () => ({
+jest.mock('@sentry-csii/hub', () => ({
   getCurrentHub(): {
     bindClient(client: Client): boolean;
     getClient(): boolean;

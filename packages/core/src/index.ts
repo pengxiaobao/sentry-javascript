@@ -12,8 +12,8 @@ export {
   setTags,
   setUser,
   withScope,
-} from '@sentry/minimal';
-export { addGlobalEventProcessor, getCurrentHub, getHubFromCarrier, Hub, makeMain, Scope } from '@sentry/hub';
+} from '@sentry-csii/minimal';
+export { addGlobalEventProcessor, getCurrentHub, getHubFromCarrier, Hub, makeMain, Scope } from '@sentry-csii/hub';
 export { API } from './api';
 export { BaseClient } from './baseclient';
 export { BackendClass, BaseBackend } from './basebackend';

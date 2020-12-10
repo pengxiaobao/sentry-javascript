@@ -7,9 +7,9 @@ import {
   Severity,
   startTransaction,
   withScope,
-} from '@sentry/node';
-import * as Sentry from '@sentry/node';
-import { Integration } from '@sentry/types';
+} from '@sentry-csii/node';
+import * as Sentry from '@sentry-csii/node';
+import { Integration } from '@sentry-csii/types';
 // NOTE: I have no idea how to fix this right now, and don't want to waste more time, as it builds just fine — Kamil
 // eslint-disable-next-line import/no-unresolved
 import { Context, Handler } from 'aws-lambda';
@@ -20,7 +20,7 @@ import { types } from 'util';
 import { AWSServices } from './awsservices';
 import { serverlessEventProcessor } from './utils';
 
-export * from '@sentry/node';
+export * from '@sentry-csii/node';
 
 const { isPromise } = types;
 

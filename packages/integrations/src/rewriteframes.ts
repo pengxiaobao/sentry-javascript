@@ -1,5 +1,5 @@
-import { Event, EventProcessor, Hub, Integration, StackFrame, Stacktrace } from '@sentry/types';
-import { basename, relative } from '@sentry/utils';
+import { Event, EventProcessor, Hub, Integration, StackFrame, Stacktrace } from '@sentry-csii/types';
+import { basename, relative } from '@sentry-csii/utils';
 
 type StackFrameIteratee = (frame: StackFrame) => StackFrame;
 

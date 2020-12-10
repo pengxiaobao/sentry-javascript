@@ -14,15 +14,15 @@
 
 ## General
 
-This package is a wrapper around `@sentry/browser`, with added functionality related to Angular. All methods available
-in `@sentry/browser` can be imported from `@sentry/angular`.
+This package is a wrapper around `@sentry-csii/browser`, with added functionality related to Angular. All methods available
+in `@sentry-csii/browser` can be imported from `@sentry-csii/angular`.
 
 To use this SDK, call `Sentry.init(options)` before you bootstrap your Angular application.
 
 ```javascript
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { init } from '@sentry/angular';
+import { init } from '@sentry-csii/angular';
 
 import { AppModule } from './app/app.module';
 
@@ -42,12 +42,12 @@ platformBrowserDynamic()
 
 ### ErrorHandler
 
-`@sentry/angular` exports a function to instantiate ErrorHandler provider that will automatically send Javascript errors
+`@sentry-csii/angular` exports a function to instantiate ErrorHandler provider that will automatically send Javascript errors
 captured by the Angular's error handler.
 
 ```javascript
 import { NgModule, ErrorHandler } from '@angular/core';
-import { createErrorHandler } from '@sentry/angular';
+import { createErrorHandler } from '@sentry-csii/angular';
 
 @NgModule({
   // ...
@@ -69,7 +69,7 @@ see `ErrorHandlerOptions` interface in `src/errorhandler.ts`.
 
 ### Tracing
 
-`@sentry/angular` exports a Trace Service, Directive and Decorators that leverage the `@sentry/tracing` Tracing
+`@sentry-csii/angular` exports a Trace Service, Directive and Decorators that leverage the `@sentry-csii/tracing` Tracing
 integration to add Angular related spans to transactions. If the Tracing integration is not enabled, this functionality
 will not work. The service itself tracks route changes and durations, where directive and decorators are tracking
 components initializations.
@@ -78,12 +78,12 @@ components initializations.
 
 Registering a Trace Service is a 3-step process.
 
-1. Register and configure the `BrowserTracing` integration from `@sentry/tracing`, including custom Angular routing
+1. Register and configure the `BrowserTracing` integration from `@sentry-csii/tracing`, including custom Angular routing
    instrumentation:
 
 ```javascript
-import { init, routingInstrumentation } from '@sentry/angular';
-import { Integrations as TracingIntegrations } from '@sentry/tracing';
+import { init, routingInstrumentation } from '@sentry-csii/angular';
+import { Integrations as TracingIntegrations } from '@sentry-csii/tracing';
 
 init({
   dsn: '__DSN__',
@@ -102,7 +102,7 @@ init({
 ```javascript
 import { NgModule } from '@angular/core';
 import { Router } from '@angular/router';
-import { TraceService } from '@sentry/angular';
+import { TraceService } from '@sentry-csii/angular';
 
 @NgModule({
   // ...
@@ -155,7 +155,7 @@ To track Angular components as part of your transactions, you have 3 options.
 _TraceDirective:_ used to track a duration between `OnInit` and `AfterViewInit` lifecycle hooks in template:
 
 ```javascript
-import { TraceDirective } from '@sentry/angular';
+import { TraceDirective } from '@sentry-csii/angular';
 
 @NgModule({
   // ...
@@ -177,7 +177,7 @@ _TraceClassDecorator:_ used to track a duration between `OnInit` and `AfterViewI
 
 ```javascript
 import { Component } from '@angular/core';
-import { TraceClassDecorator } from '@sentry/angular';
+import { TraceClassDecorator } from '@sentry-csii/angular';
 
 @Component({
   selector: 'layout-header',
@@ -193,7 +193,7 @@ _TraceMethodDecorator:_ used to track a specific lifecycle hooks as point-in-tim
 
 ```javascript
 import { Component, OnInit } from '@angular/core';
-import { TraceMethodDecorator } from '@sentry/angular';
+import { TraceMethodDecorator } from '@sentry-csii/angular';
 
 @Component({
   selector: 'app-footer',
@@ -211,7 +211,7 @@ helper. For example, if you'd like to track the duration of Angular boostraping 
 ```javascript
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { init, getActiveTransaction } from '@sentry/angular';
+import { init, getActiveTransaction } from '@sentry-csii/angular';
 
 import { AppModule } from './app/app.module';
 

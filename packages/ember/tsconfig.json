@@ -17,10 +17,10 @@
     "paths": {
       "dummy/tests/*": ["tests/*"],
       "dummy/*": ["tests/dummy/app/*", "app/*"],
-      "@sentry/ember": ["addon"],
-      "@sentry/ember/*": ["addon/*"],
-      "@sentry/ember/test-support": ["addon-test-support"],
-      "@sentry/ember/test-support/*": ["addon-test-support/*"],
+      "@sentry-csii/ember": ["addon"],
+      "@sentry-csii/ember/*": ["addon/*"],
+      "@sentry-csii/ember/test-support": ["addon-test-support"],
+      "@sentry-csii/ember/test-support/*": ["addon-test-support/*"],
       "*": ["types/*"]
     }
   },

@@ -1,6 +1,6 @@
-import { Hub } from '@sentry/hub';
-import { EventProcessor, Integration } from '@sentry/types';
-import { dynamicRequire, fill, logger } from '@sentry/utils';
+import { Hub } from '@sentry-csii/hub';
+import { EventProcessor, Integration } from '@sentry-csii/types';
+import { dynamicRequire, fill, logger } from '@sentry-csii/utils';
 
 interface MysqlConnection {
   prototype: {

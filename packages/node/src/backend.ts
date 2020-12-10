@@ -1,5 +1,5 @@
-import { BaseBackend, getCurrentHub } from '@sentry/core';
-import { Event, EventHint, Mechanism, Options, Severity, Transport, TransportOptions } from '@sentry/types';
+import { BaseBackend, getCurrentHub } from '@sentry-csii/core';
+import { Event, EventHint, Mechanism, Options, Severity, Transport, TransportOptions } from '@sentry-csii/types';
 import {
   addExceptionMechanism,
   addExceptionTypeValue,
@@ -9,7 +9,7 @@ import {
   isPlainObject,
   normalizeToSize,
   SyncPromise,
-} from '@sentry/utils';
+} from '@sentry-csii/utils';
 
 import { extractStackFromError, parseError, parseStack, prepareFramesForEvent } from './parsers';
 import { HTTPSTransport, HTTPTransport } from './transports';

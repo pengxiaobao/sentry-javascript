@@ -8,7 +8,7 @@ module.exports = {
     ecmaVersion: 2018,
     jsx: true,
   },
-  extends: ['@sentry-internal/sdk'],
+  extends: ['@sentry-csii-internal/sdk'],
   ignorePatterns: ['build/**', 'dist/**', 'esm/**', 'examples/**', 'scripts/**'],
   overrides: [
     {

@@ -1,4 +1,4 @@
-import { API } from '@sentry/core';
+import { API } from '@sentry-csii/core';
 import {
   Event,
   Response as SentryResponse,
@@ -6,8 +6,8 @@ import {
   Status,
   Transport,
   TransportOptions,
-} from '@sentry/types';
-import { logger, parseRetryAfterHeader, PromiseBuffer, SentryError } from '@sentry/utils';
+} from '@sentry-csii/types';
+import { logger, parseRetryAfterHeader, PromiseBuffer, SentryError } from '@sentry-csii/utils';
 
 /** Base Transport class implementation */
 export abstract class BaseTransport implements Transport {

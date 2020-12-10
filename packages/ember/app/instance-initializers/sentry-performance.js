@@ -1,1 +1,1 @@
-export { default, initialize } from '@sentry/ember/instance-initializers/sentry-performance';
+export { default, initialize } from '@sentry-csii/ember/instance-initializers/sentry-performance';

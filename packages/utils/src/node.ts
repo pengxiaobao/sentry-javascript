@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ExtractedNodeRequestData } from '@sentry/types';
+import { ExtractedNodeRequestData } from '@sentry-csii/types';
 
 import { isString } from './is';
 import { normalize } from './object';

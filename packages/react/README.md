@@ -14,15 +14,15 @@
 
 ## General
 
-This package is a wrapper around `@sentry/browser`, with added functionality related to React. All methods available in
-`@sentry/browser` can be imported from `@sentry/react`.
+This package is a wrapper around `@sentry-csii/browser`, with added functionality related to React. All methods available in
+`@sentry-csii/browser` can be imported from `@sentry-csii/react`.
 
 To use this SDK, call `Sentry.init(options)` before you mount your React component.
 
 ```javascript
 import React from 'react';
 import ReactDOM from "react-dom";
-import * as Sentry from '@sentry/react';
+import * as Sentry from '@sentry-csii/react';
 
 Sentry.init({
   dsn: '__DSN__',
@@ -39,13 +39,13 @@ ReactDOM.render(<App />, rootNode);
 
 ### ErrorBoundary
 
-`@sentry/react` exports an ErrorBoundary component that will automatically send Javascript errors from inside a
+`@sentry-csii/react` exports an ErrorBoundary component that will automatically send Javascript errors from inside a
 component tree to Sentry, and set a fallback UI. Requires React version >= 16.
 
 > app.js
 ```javascript
 import React from 'react';
-import * as Sentry from '@sentry/react';
+import * as Sentry from '@sentry-csii/react';
 
 function FallbackComponent() {
   return (
@@ -68,14 +68,14 @@ export default App;
 
 ### Profiler
 
-`@sentry/react` exports a Profiler component that leverages the `@sentry/tracing` Tracing integration to add React related
+`@sentry-csii/react` exports a Profiler component that leverages the `@sentry-csii/tracing` Tracing integration to add React related
 spans to transactions. If the Tracing integration is not enabled, the Profiler component will not work. The Profiler
 tracks component mount, render duration and updates. Requires React version >= 15.
 
 > app.js
 ```javascript
 import React from 'react';
-import * as Sentry from '@sentry/react';
+import * as Sentry from '@sentry-csii/react';
 
 class App extends React.Component {
   render() {

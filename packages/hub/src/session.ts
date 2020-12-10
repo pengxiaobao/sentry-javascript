@@ -1,5 +1,5 @@
-import { Session as SessionInterface, SessionContext, SessionStatus } from '@sentry/types';
-import { dropUndefinedKeys, uuid4 } from '@sentry/utils';
+import { Session as SessionInterface, SessionContext, SessionStatus } from '@sentry-csii/types';
+import { dropUndefinedKeys, uuid4 } from '@sentry-csii/utils';
 
 /**
  * @inheritdoc

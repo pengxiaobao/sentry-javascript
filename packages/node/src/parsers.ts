@@ -1,5 +1,5 @@
-import { Event, Exception, ExtendedError, StackFrame } from '@sentry/types';
-import { addContextToFrame, basename, dirname, SyncPromise } from '@sentry/utils';
+import { Event, Exception, ExtendedError, StackFrame } from '@sentry-csii/types';
+import { addContextToFrame, basename, dirname, SyncPromise } from '@sentry-csii/utils';
 import { readFile } from 'fs';
 import { LRUMap } from 'lru_map';
 
