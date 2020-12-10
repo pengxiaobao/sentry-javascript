@@ -28,6 +28,7 @@
   },
   "scripts": {
     "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
     "lint": "prettier --check \"{src,test}/**/*.js\"",
     "fix": "prettier --write \"{src,test}/**/*.js\"",
     "test": "mocha test --recursive",

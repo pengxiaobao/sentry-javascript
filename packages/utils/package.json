@@ -38,6 +38,7 @@
     "build:watch:esm": "tsc -p tsconfig.esm.json -w --preserveWatchOutput",
     "clean": "rimraf dist esm coverage *.js *.js.map *.d.ts",
     "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
     "lint": "run-s lint:prettier lint:eslint",
     "lint:prettier": "prettier --check \"{src,test}/**/*.ts\"",
     "lint:eslint": "eslint . --cache --cache-location '../../eslintcache/' --format stylish",

@@ -20,6 +20,7 @@
   },
   "scripts": {
     "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
     "pack": "npm pack"
   },
   "volta": {

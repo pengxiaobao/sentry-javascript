@@ -38,6 +38,7 @@
   },
   "scripts": {
     "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
     "lint": "prettier --check \"**/*.js\"",
     "fix": "prettier --write \"**/*.js\"",
     "pack": "npm pack"
