@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { getCurrentHub } from '@sentry-csii/core';
-import { Event, Integration, Severity } from '@sentry-csii/types';
+import { getCurrentHub } from 'csii-sentry-core';
+import { Event, Integration, Severity } from 'csii-sentry-types';
 import {
   addExceptionMechanism,
   addInstrumentationHandler,
@@ -9,7 +9,7 @@ import {
   isPrimitive,
   isString,
   logger,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 
 import { eventFromUnknownInput } from '../eventbuilder';
 import { shouldIgnoreOnError } from '../helpers';
@@ -134,7 +134,7 @@ export class GlobalHandlers implements Integration {
           // to CustomEvents, moving the `promise` and `reason` attributes of the PRE into
           // the CustomEvent's `detail` attribute, since they're not part of CustomEvent's spec
           // see https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent and
-          // https://github.com/getsentry/sentry-javascript/issues/2380
+          // https://github.com/pengxiaobao/sentry-javascript/issues/2380
           else if ('detail' in e && 'reason' in e.detail) {
             error = e.detail.reason;
           }

@@ -1,5 +1,5 @@
-import { Event, EventHint, EventProcessor, ExtendedError, Hub, Integration } from '@sentry-csii/types';
-import { isError, isPlainObject, logger, normalize } from '@sentry-csii/utils';
+import { Event, EventHint, EventProcessor, ExtendedError, Hub, Integration } from 'csii-sentry-types';
+import { isError, isPlainObject, logger, normalize } from 'csii-sentry-utils';
 
 /** JSDoc */
 interface ExtraErrorDataOptions {

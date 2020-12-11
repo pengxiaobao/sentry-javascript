@@ -1,8 +1,8 @@
-import { addGlobalEventProcessor, SDK_VERSION } from '@sentry-csii/browser';
+import { addGlobalEventProcessor, SDK_VERSION } from 'csii-sentry-browser';
 
 /**
  * A global side effect that makes sure Sentry events that user
- * `@sentry-csii/react` will correctly have Sentry events associated
+ * `csii-sentry-react` will correctly have Sentry events associated
  * with it.
  */
 function createReactEventProcessor(): void {
@@ -14,7 +14,7 @@ function createReactEventProcessor(): void {
         packages: [
           ...((event.sdk && event.sdk.packages) || []),
           {
-            name: 'npm:@sentry-csii/react',
+            name: 'npm:csii-sentry-react',
             version: SDK_VERSION,
           },
         ],
@@ -26,7 +26,7 @@ function createReactEventProcessor(): void {
   }
 }
 
-export * from '@sentry-csii/browser';
+export * from 'csii-sentry-browser';
 
 export { Profiler, withProfiler, useProfiler } from './profiler';
 export { ErrorBoundary, withErrorBoundary } from './errorboundary';

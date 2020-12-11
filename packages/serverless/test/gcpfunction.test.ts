@@ -1,4 +1,4 @@
-import { Event } from '@sentry-csii/types';
+import { Event } from 'csii-sentry-types';
 import * as domain from 'domain';
 
 import * as Sentry from '../src';
@@ -400,7 +400,7 @@ describe('GCPFunction', () => {
               version: '1337',
             },
             {
-              name: 'npm:@sentry-csii/serverless',
+              name: 'npm:csii-sentry-serverless',
               version: '6.6.6',
             },
           ],
@@ -435,7 +435,7 @@ describe('GCPFunction', () => {
           integrations: ['AWSLambda'],
           packages: [
             {
-              name: 'npm:@sentry-csii/serverless',
+              name: 'npm:csii-sentry-serverless',
               version: '6.6.6',
             },
           ],

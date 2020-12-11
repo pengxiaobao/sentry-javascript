@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import timeout from '../helpers/utils';
-import { instrumentRoutePerformance } from '@sentry-csii/ember';
+import { instrumentRoutePerformance } from 'csii-sentry-ember';
 
 const SLOW_TRANSITION_WAIT = 1500;
 

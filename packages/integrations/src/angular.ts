@@ -1,5 +1,5 @@
-import { Event, EventProcessor, Hub, Integration } from '@sentry-csii/types';
-import { getGlobalObject, logger } from '@sentry-csii/utils';
+import { Event, EventProcessor, Hub, Integration } from 'csii-sentry-types';
+import { getGlobalObject, logger } from 'csii-sentry-utils';
 
 // See https://github.com/angular/angular.js/blob/v1.4.7/src/minErr.js
 const angularPattern = /^\[((?:[$a-zA-Z0-9]+:)?(?:[$a-zA-Z0-9]+))\] (.*?)\n?(\S+)$/;
@@ -47,7 +47,7 @@ export class Angular implements Integration {
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public constructor(options: { angular?: any } = {}) {
-    logger.log('You are still using the Angular integration, consider moving to @sentry-csii/angular');
+    logger.log('You are still using the Angular integration, consider moving to csii-sentry-angular');
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
     this._angular = options.angular || getGlobalObject<any>().angular;

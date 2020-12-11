@@ -1,6 +1,6 @@
-import { addGlobalEventProcessor, getCurrentHub } from '@sentry-csii/core';
-import { Event, EventHint, Exception, ExtendedError, Integration } from '@sentry-csii/types';
-import { isInstanceOf } from '@sentry-csii/utils';
+import { addGlobalEventProcessor, getCurrentHub } from 'csii-sentry-core';
+import { Event, EventHint, Exception, ExtendedError, Integration } from 'csii-sentry-types';
+import { isInstanceOf } from 'csii-sentry-utils';
 
 import { exceptionFromStacktrace } from '../parsers';
 import { computeStackTrace } from '../tracekit';

@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
   };
 
-  ENV['@sentry-csii/ember'] = {
+  ENV['csii-sentry-ember'] = {
     sentry: {
       tracesSampleRate: 1,
       dsn: process.env.SENTRY_DSN,
@@ -53,10 +53,10 @@ module.exports = function(environment) {
     ENV.APP.autoboot = false;
 
     // Include fake dsn so that instrumentation is enabled when running from cli
-    ENV['@sentry-csii/ember'].sentry.dsn = 'https://0@0.ingest.sentry.io/0';
+    ENV['csii-sentry-ember'].sentry.dsn = 'https://0@0.ingest.sentry.io/0';
 
-    ENV['@sentry-csii/ember'].minimumRunloopQueueDuration = 0;
-    ENV['@sentry-csii/ember'].minimumComponentRenderDuration = 0;
+    ENV['csii-sentry-ember'].minimumRunloopQueueDuration = 0;
+    ENV['csii-sentry-ember'].minimumComponentRenderDuration = 0;
   }
 
   if (environment === 'production') {

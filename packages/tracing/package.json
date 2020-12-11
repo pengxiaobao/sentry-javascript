@@ -1,9 +1,9 @@
 {
-  "name": "@sentry-csii/tracing",
+  "name": "csii-sentry-tracing",
   "version": "5.29.0",
   "description": "Extensions for Sentry AM",
-  "repository": "git://github.com/getsentry/sentry-javascript.git",
-  "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/tracing",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/tracing",
   "author": "Sentry",
   "license": "MIT",
   "engines": {
@@ -16,15 +16,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@sentry-csii/hub": "5.29.0",
-    "@sentry-csii/minimal": "5.29.0",
-    "@sentry-csii/types": "5.29.0",
-    "@sentry-csii/utils": "5.29.0",
+    "csii-sentry-hub": "5.29.0",
+    "csii-sentry-minimal": "5.29.0",
+    "csii-sentry-types": "5.29.0",
+    "csii-sentry-utils": "5.29.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@sentry-csii-internal/eslint-config-sdk": "5.29.0",
-    "@sentry-csii/browser": "5.29.0",
+    "sentry-csii-internal-eslint-config-sdk": "5.29.0",
+    "csii-sentry-browser": "5.29.0",
     "@types/express": "^4.17.1",
     "@types/jsdom": "^16.2.3",
     "eslint": "7.6.0",

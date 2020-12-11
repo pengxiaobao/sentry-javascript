@@ -18,11 +18,11 @@ module.exports = config => {
         declaration: false,
         declarationMap: false,
         paths: {
-          '@sentry-csii/utils/*': ['../../../utils/src/*'],
-          '@sentry-csii/core': ['../../../core/src'],
-          '@sentry-csii/hub': ['../../../hub/src'],
-          '@sentry-csii/types': ['../../../types/src'],
-          '@sentry-csii/minimal': ['../../../minimal/src'],
+          'csii-sentry-utils/*': ['../../../utils/src/*'],
+          'csii-sentry-core': ['../../../core/src'],
+          'csii-sentry-hub': ['../../../hub/src'],
+          'csii-sentry-types': ['../../../types/src'],
+          'csii-sentry-minimal': ['../../../minimal/src'],
         },
       },
       bundlerOptions: {

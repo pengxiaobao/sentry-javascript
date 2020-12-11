@@ -1,5 +1,5 @@
-import { BrowserClient } from '@sentry-csii/browser';
-import { Hub } from '@sentry-csii/hub';
+import { BrowserClient } from 'csii-sentry-browser';
+import { Hub } from 'csii-sentry-hub';
 
 import { DEFAULT_IDLE_TIMEOUT, IdleTransaction, IdleTransactionSpanRecorder } from '../src/idletransaction';
 import { Span } from '../src/span';

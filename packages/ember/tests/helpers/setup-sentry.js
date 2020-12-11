@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import sinon from 'sinon';
-import { _instrumentEmberRouter } from '@sentry-csii/ember/instance-initializers/sentry-performance';
+import { _instrumentEmberRouter } from 'csii-sentry-ember/instance-initializers/sentry-performance';
 
 // Keep a reference to the original startTransaction as the application gets re-initialized and setup for
 // the integration doesn't occur again after the first time.

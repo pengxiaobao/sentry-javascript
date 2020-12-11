@@ -58,7 +58,7 @@ class Logger {
   }
 }
 
-// Ensure we only have a single logger instance, even if multiple versions of @sentry-csii/utils are being used
+// Ensure we only have a single logger instance, even if multiple versions of csii-sentry-utils are being used
 global.__SENTRY__ = global.__SENTRY__ || {};
 const logger = (global.__SENTRY__.logger as Logger) || (global.__SENTRY__.logger = new Logger());
 

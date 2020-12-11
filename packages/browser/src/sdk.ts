@@ -1,5 +1,5 @@
-import { getCurrentHub, initAndBind, Integrations as CoreIntegrations } from '@sentry-csii/core';
-import { getGlobalObject, SyncPromise } from '@sentry-csii/utils';
+import { getCurrentHub, initAndBind, Integrations as CoreIntegrations } from 'csii-sentry-core';
+import { getGlobalObject, SyncPromise } from 'csii-sentry-utils';
 
 import { BrowserOptions } from './backend';
 import { BrowserClient } from './client';
@@ -27,7 +27,7 @@ export const defaultIntegrations = [
  *
  * ```
  *
- * import { init } from '@sentry-csii/browser';
+ * import { init } from 'csii-sentry-browser';
  *
  * init({
  *   dsn: '__DSN__',
@@ -38,7 +38,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * import { configureScope } from '@sentry-csii/browser';
+ * import { configureScope } from 'csii-sentry-browser';
  * configureScope((scope: Scope) => {
  *   scope.setExtra({ battery: 0.7 });
  *   scope.setTag({ user_mode: 'admin' });
@@ -49,7 +49,7 @@ export const defaultIntegrations = [
  * @example
  * ```
  *
- * import { addBreadcrumb } from '@sentry-csii/browser';
+ * import { addBreadcrumb } from 'csii-sentry-browser';
  * addBreadcrumb({
  *   message: 'My Breadcrumb',
  *   // ...
@@ -60,7 +60,7 @@ export const defaultIntegrations = [
  *
  * ```
  *
- * import * as Sentry from '@sentry-csii/browser';
+ * import * as Sentry from 'csii-sentry-browser';
  * Sentry.captureMessage('Hello, world!');
  * Sentry.captureException(new Error('Good bye'));
  * Sentry.captureEvent({

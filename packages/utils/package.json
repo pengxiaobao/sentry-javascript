@@ -1,9 +1,9 @@
 {
-  "name": "@sentry-csii/utils",
+  "name": "csii-sentry-utils",
   "version": "5.29.0",
   "description": "Utilities for all Sentry JavaScript SDKs",
-  "repository": "git://github.com/getsentry/sentry-javascript.git",
-  "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/utils",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/utils",
   "author": "Sentry",
   "license": "BSD-3-Clause",
   "engines": {
@@ -16,11 +16,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@sentry-csii/types": "5.29.0",
+    "csii-sentry-types": "5.29.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@sentry-csii-internal/eslint-config-sdk": "5.29.0",
+    "sentry-csii-internal-eslint-config-sdk": "5.29.0",
     "chai": "^4.1.2",
     "eslint": "7.6.0",
     "jest": "^24.7.1",

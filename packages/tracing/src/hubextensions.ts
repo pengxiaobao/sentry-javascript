@@ -1,5 +1,5 @@
-import { getActiveDomain, getMainCarrier, Hub } from '@sentry-csii/hub';
-import { CustomSamplingContext, SamplingContext, TransactionContext } from '@sentry-csii/types';
+import { getActiveDomain, getMainCarrier, Hub } from 'csii-sentry-hub';
+import { CustomSamplingContext, SamplingContext, TransactionContext } from 'csii-sentry-types';
 import {
   dynamicRequire,
   extractNodeRequestData,
@@ -7,7 +7,7 @@ import {
   isInstanceOf,
   isNodeEnv,
   logger,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 
 import { registerErrorInstrumentation } from './errors';
 import { IdleTransaction } from './idletransaction';

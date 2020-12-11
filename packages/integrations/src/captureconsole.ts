@@ -1,5 +1,5 @@
-import { EventProcessor, Hub, Integration, Severity } from '@sentry-csii/types';
-import { fill, getGlobalObject, safeJoin } from '@sentry-csii/utils';
+import { EventProcessor, Hub, Integration, Severity } from 'csii-sentry-types';
+import { fill, getGlobalObject, safeJoin } from 'csii-sentry-utils';
 
 const global = getGlobalObject<Window | NodeJS.Global>();
 

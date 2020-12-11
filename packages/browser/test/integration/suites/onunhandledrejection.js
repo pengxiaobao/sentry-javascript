@@ -1,43 +1,43 @@
-describe("window.onunhandledrejection", function() {
-  it("should capture unhandledrejection with error", function() {
-    return runInSandbox(sandbox, function() {
-      if (supportsOnunhandledRejection()) {
-        Promise.reject(new Error("test2"));
-      } else {
-        window.resolveTest({ window: window });
-      }
-    }).then(function(summary) {
-      if (summary.window.supportsOnunhandledRejection()) {
-        assert.equal(summary.events[0].exception.values[0].value, "test2");
-        assert.equal(summary.events[0].exception.values[0].type, "Error");
-
-        // Of course Safari had to screw up here...
-        if (!/Version\/\d.+Safari\/\d/.test(window.navigator.userAgent)) {
-          assert.isAtLeast(
-            summary.events[0].exception.values[0].stacktrace.frames.length,
-            1
-          );
-        }
-        assert.equal(
-          summary.events[0].exception.values[0].mechanism.handled,
-          false
-        );
-        assert.equal(
-          summary.events[0].exception.values[0].mechanism.type,
-          "onunhandledrejection"
-        );
-      }
-    });
-  });
-
-  // something, somewhere, (likely a browser extension) effectively casts PromiseRejectionEvents
-  // to CustomEvents, moving the `promise` and `reason` attributes of the PRE into
-  // the CustomEvent's `detail` attribute, since they're not part of CustomEvent's spec
-  // see https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent and
-  // https://github.com/getsentry/sentry-javascript/issues/2380
-  it("should capture PromiseRejectionEvent cast to CustomEvent with type unhandledrejection", function() {
-    return runInSandbox(sandbox, function() {
-      if (supportsOnunhandledRejection()) {
+{
+  "name": "sentry-csii-internal-eslint-plugin-sdk",
+  "version": "5.29.0",
+  "description": "Official Sentry SDK eslint plugin",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/eslint-plugin-sdk",
+  "author": "Sentry",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "prettier": "1.19.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"{src,test}/**/*.js\"",
+    "fix": "prettier --write \"{src,test}/**/*.js\"",
+    "test": "mocha test --recursive",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
         // this isn't how it happens in real life, in that the promise and reason
         // values come from an actual PromiseRejectionEvent, but it's enough to test
         // how the SDK handles the structure

@@ -1,4 +1,4 @@
-import { getCurrentHub } from '@sentry-csii/core';
+import { getCurrentHub } from 'csii-sentry-core';
 import * as http from 'http';
 import { URL } from 'url';
 

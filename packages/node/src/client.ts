@@ -1,5 +1,5 @@
-import { BaseClient, Scope } from '@sentry-csii/core';
-import { Event, EventHint } from '@sentry-csii/types';
+import { BaseClient, Scope } from 'csii-sentry-core';
+import { Event, EventHint } from 'csii-sentry-types';
 
 import { NodeBackend, NodeOptions } from './backend';
 import { SDK_NAME, SDK_VERSION } from './version';
@@ -30,7 +30,7 @@ export class NodeClient extends BaseClient<NodeBackend, NodeOptions> {
       packages: [
         ...((event.sdk && event.sdk.packages) || []),
         {
-          name: 'npm:@sentry-csii/node',
+          name: 'npm:csii-sentry-node',
           version: SDK_VERSION,
         },
       ],

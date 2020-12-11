@@ -7,9 +7,9 @@
 
 # Sentry JavaScript SDK Types
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/types.svg)](https://www.npmjs.com/package/@sentry-csii/types)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/types.svg)](https://www.npmjs.com/package/@sentry-csii/types)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/types.svg)](https://www.npmjs.com/package/@sentry-csii/types)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-types.svg)](https://www.npmjs.com/package/csii-sentry-types)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-types.svg)](https://www.npmjs.com/package/csii-sentry-types)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-types.svg)](https://www.npmjs.com/package/csii-sentry-types)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links

@@ -1,4 +1,4 @@
-import { Dsn } from '@sentry-csii/utils';
+import { Dsn } from 'csii-sentry-utils';
 
 import { API } from '../../src/api';
 

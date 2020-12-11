@@ -1,6 +1,6 @@
-import { BrowserClient } from '@sentry-csii/browser';
-import { Hub, makeMain } from '@sentry-csii/hub';
-import * as utils from '@sentry-csii/utils';
+import { BrowserClient } from 'csii-sentry-browser';
+import { Hub, makeMain } from 'csii-sentry-hub';
+import * as utils from 'csii-sentry-utils';
 
 import { Span, SpanStatus, Transaction } from '../../src';
 import {

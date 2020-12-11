@@ -7,9 +7,9 @@
 
 # Sentry JavaScript SDK Core
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/core.svg)](https://www.npmjs.com/package/@sentry-csii/core)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/core.svg)](https://www.npmjs.com/package/@sentry-csii/core)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/core.svg)](https://www.npmjs.com/package/@sentry-csii/core)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-core.svg)](https://www.npmjs.com/package/csii-sentry-core)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-core.svg)](https://www.npmjs.com/package/csii-sentry-core)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-core.svg)](https://www.npmjs.com/package/csii-sentry-core)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links
@@ -20,6 +20,6 @@
 ## General
 
 This package contains interface definitions, base classes and utilities for building Sentry JavaScript SDKs, like
-`@sentry-csii/node` or `@sentry-csii/browser`.
+`csii-sentry-node` or `csii-sentry-browser`.
 
 Please consider all classes and exported functions and interfaces `internal`.

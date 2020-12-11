@@ -1,7 +1,7 @@
-import * as sentryCore from '@sentry-csii/core';
-import { Hub } from '@sentry-csii/hub';
-import * as hubModule from '@sentry-csii/hub';
-import { addExtensionMethods, Span, TRACEPARENT_REGEXP, Transaction } from '@sentry-csii/tracing';
+import * as sentryCore from 'csii-sentry-core';
+import { Hub } from 'csii-sentry-hub';
+import * as hubModule from 'csii-sentry-hub';
+import { addExtensionMethods, Span, TRACEPARENT_REGEXP, Transaction } from 'csii-sentry-tracing';
 import * as http from 'http';
 import * as nock from 'nock';
 
@@ -19,8 +19,8 @@ describe('tracing', () => {
     );
     addExtensionMethods();
 
-    // we need to mock both of these because the tracing handler relies on `@sentry-csii/core` while the sampler relies on
-    // `@sentry-csii/hub`, and mocking breaks the link between the two
+    // we need to mock both of these because the tracing handler relies on `csii-sentry-core` while the sampler relies on
+    // `csii-sentry-hub`, and mocking breaks the link between the two
     jest.spyOn(sentryCore, 'getCurrentHub').mockReturnValue(hub);
     jest.spyOn(hubModule, 'getCurrentHub').mockReturnValue(hub);
 

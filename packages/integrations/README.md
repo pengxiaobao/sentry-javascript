@@ -7,9 +7,9 @@
 
 # Sentry JavaScript SDK Integrations
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/integrations.svg)](https://www.npmjs.com/package/@sentry-csii/integrations)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/integrations.svg)](https://www.npmjs.com/package/@sentry-csii/integrations)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/integrations.svg)](https://www.npmjs.com/package/@sentry-csii/integrations)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-integrations.svg)](https://www.npmjs.com/package/csii-sentry-integrations)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-integrations.svg)](https://www.npmjs.com/package/csii-sentry-integrations)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-integrations.svg)](https://www.npmjs.com/package/csii-sentry-integrations)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links

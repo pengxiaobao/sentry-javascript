@@ -14,8 +14,8 @@
 
 ## General
 
-This package is a wrapper around `@sentry-csii/node`, with added functionality related to various Serverless solutions. All
-methods available in `@sentry-csii/node` can be imported from `@sentry-csii/serverless`.
+This package is a wrapper around `csii-sentry-node`, with added functionality related to various Serverless solutions. All
+methods available in `csii-sentry-node` can be imported from `csii-sentry-serverless`.
 
 Currently supported environment:
 
@@ -24,7 +24,7 @@ Currently supported environment:
 To use this SDK, call `Sentry.AWSLambda.init(options)` at the very beginning of your JavaScript file.
 
 ```javascript
-import * as Sentry from '@sentry-csii/serverless';
+import * as Sentry from 'csii-sentry-serverless';
 
 Sentry.AWSLambda.init({
   dsn: '__DSN__',
@@ -45,7 +45,7 @@ exports.handler = Sentry.AWSLambda.wrapHandler((event, context, callback) => {
 If you also want to trace performance of all the incoming requests and also outgoing AWS service requests, just set the `tracesSampleRate` option.
 
 ```javascript
-import * as Sentry from '@sentry-csii/serverless';
+import * as Sentry from 'csii-sentry-serverless';
 
 Sentry.AWSLambda.init({
   dsn: '__DSN__',
@@ -58,7 +58,7 @@ Sentry.AWSLambda.init({
 To use this SDK, call `Sentry.GCPFunction.init(options)` at the very beginning of your JavaScript file.
 
 ```javascript
-import * as Sentry from '@sentry-csii/serverless';
+import * as Sentry from 'csii-sentry-serverless';
 
 Sentry.GCPFunction.init({
   dsn: '__DSN__',

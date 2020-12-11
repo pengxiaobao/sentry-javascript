@@ -14,8 +14,8 @@
 
 ## General
 
-This package is a wrapper around `@sentry-csii/browser`, with added functionality related to Vue.js. All methods available in
-`@sentry-csii/browser` can be imported from `@sentry-csii/vue`.
+This package is a wrapper around `csii-sentry-browser`, with added functionality related to Vue.js. All methods available in
+`csii-sentry-browser` can be imported from `csii-sentry-vue`.
 
 To use this SDK, call `Sentry.init(options)` before you create a new Vue instance.
 
@@ -23,7 +23,7 @@ To use this SDK, call `Sentry.init(options)` before you create a new Vue instanc
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import * as Sentry from '@sentry-csii/vue'
+import * as Sentry from 'csii-sentry-vue'
 
 Sentry.init({
   Vue: Vue,

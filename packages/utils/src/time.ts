@@ -62,7 +62,7 @@ function getBrowserPerformance(): Performance | undefined {
   // performance.timeOrigin + performance.now() to have an arbitrary skew over Date.now(). In laptop computers, we have
   // observed skews that can be as long as days, weeks or months.
   //
-  // See https://github.com/getsentry/sentry-javascript/issues/2590.
+  // See https://github.com/pengxiaobao/sentry-javascript/issues/2590.
   //
   // BUG: despite our best intentions, this workaround has its limitations. It mostly addresses timings of pageload
   // transactions, but ignores the skew built up over time that can aversely affect timestamps of navigation
@@ -114,7 +114,7 @@ export const dateTimestampInSeconds = dateTimestampSource.nowSeconds.bind(dateTi
  * BUG: Note that because of how browsers implement the Performance API, the clock might stop when the computer is
  * asleep. This creates a skew between `dateTimestampInSeconds` and `timestampInSeconds`. The
  * skew can grow to arbitrary amounts like days, weeks or months.
- * See https://github.com/getsentry/sentry-javascript/issues/2590.
+ * See https://github.com/pengxiaobao/sentry-javascript/issues/2590.
  */
 export const timestampInSeconds = timestampSource.nowSeconds.bind(timestampSource);
 

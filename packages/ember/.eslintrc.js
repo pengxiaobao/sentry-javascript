@@ -1,32 +1,31 @@
-'use strict';
-
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  env: {
+    es6: true,
+  },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      legacyDecorators: true,
+  },
+  extends: ['sentry-csii-internal-sdk'],
+  ignorePatterns: ['build/**', 'dist/**', 'esm/**', 'examples/**', 'scripts/**'],
+  overrides: [{
+      files: ['*.ts', '*.tsx', '*.d.ts'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
     },
-  },
-  plugins: ['ember'],
-  extends: ['eslint:recommended', 'plugin:ember/recommended'],
-  env: {
-    browser: true,
-  },
-  globals: {
-    QUnit: true,
-  },
-  rules: {},
-  overrides: [
     {
-      files: ['addon/**'],
-      plugins: ['@sentry-csii-internal/eslint-plugin-sdk'],
+      files: ['test/**'],
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+      },
     },
-    // node files
-    {
-      files: [
+  ],
+  rules: {
+    'max-lines': 'off',
+  },
+};
         '.eslintrc.js',
         '.template-lintrc.js',
         'ember-cli-build.js',

@@ -1,6 +1,6 @@
-import { BaseClient, Scope } from '@sentry-csii/core';
-import { Event, EventHint } from '@sentry-csii/types';
-import { getGlobalObject, logger } from '@sentry-csii/utils';
+import { BaseClient, Scope } from 'csii-sentry-core';
+import { Event, EventHint } from 'csii-sentry-types';
+import { getGlobalObject, logger } from 'csii-sentry-utils';
 
 import { BrowserBackend, BrowserOptions } from './backend';
 import { injectReportDialog, ReportDialogOptions } from './helpers';
@@ -57,7 +57,7 @@ export class BrowserClient extends BaseClient<BrowserBackend, BrowserOptions> {
       packages: [
         ...((event.sdk && event.sdk.packages) || []),
         {
-          name: 'npm:@sentry-csii/browser',
+          name: 'npm:csii-sentry-browser',
           version: SDK_VERSION,
         },
       ],

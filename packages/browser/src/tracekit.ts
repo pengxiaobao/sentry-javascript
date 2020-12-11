@@ -250,7 +250,7 @@ function popFrames(stacktrace: StackTrace, popSize: number): StackTrace {
 
 /**
  * There are cases where stacktrace.message is an Event object
- * https://github.com/getsentry/sentry-javascript/issues/1949
+ * https://github.com/pengxiaobao/sentry-javascript/issues/1949
  * In this specific case we try to extract stacktrace.message.error.message
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

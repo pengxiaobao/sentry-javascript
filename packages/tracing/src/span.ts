@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-import { Span as SpanInterface, SpanContext, Transaction } from '@sentry-csii/types';
-import { dropUndefinedKeys, timestampWithMs, uuid4 } from '@sentry-csii/utils';
+import { Span as SpanInterface, SpanContext, Transaction } from 'csii-sentry-types';
+import { dropUndefinedKeys, timestampWithMs, uuid4 } from 'csii-sentry-utils';
 
 import { SpanStatus } from './spanstatus';
 

@@ -1,4 +1,4 @@
-import { addInstrumentationHandler, logger } from '@sentry-csii/utils';
+import { addInstrumentationHandler, logger } from 'csii-sentry-utils';
 
 import { SpanStatus } from './spanstatus';
 import { getActiveTransaction } from './utils';

@@ -7,9 +7,9 @@
 
 # Official Sentry SDK for NodeJS
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/node.svg)](https://www.npmjs.com/package/@sentry-csii/node)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/node.svg)](https://www.npmjs.com/package/@sentry-csii/node)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/node.svg)](https://www.npmjs.com/package/@sentry-csii/node)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-node.svg)](https://www.npmjs.com/package/csii-sentry-node)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-node.svg)](https://www.npmjs.com/package/csii-sentry-node)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-node.svg)](https://www.npmjs.com/package/csii-sentry-node)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links
@@ -24,9 +24,9 @@ hook into the environment. Note that you can turn off almost all side effects us
 
 ```javascript
 // ES5 Syntax
-const Sentry = require('@sentry-csii/node');
+const Sentry = require('csii-sentry-node');
 // ES6 Syntax
-import * as Sentry from '@sentry-csii/node';
+import * as Sentry from 'csii-sentry-node';
 
 Sentry.init({
   dsn: '__DSN__',
@@ -34,7 +34,7 @@ Sentry.init({
 });
 ```
 
-To set context information or send manual events, use the exported functions of `@sentry-csii/node`. Note that these
+To set context information or send manual events, use the exported functions of `csii-sentry-node`. Note that these
 functions will not perform any action before you have called `init()`:
 
 ```javascript

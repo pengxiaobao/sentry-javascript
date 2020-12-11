@@ -1,5 +1,5 @@
-import { Event, EventHint, Options, Session, Severity, Transport } from '@sentry-csii/types';
-import { logger, SentryError } from '@sentry-csii/utils';
+import { Event, EventHint, Options, Session, Severity, Transport } from 'csii-sentry-types';
+import { logger, SentryError } from 'csii-sentry-utils';
 
 import { NoopTransport } from './transports/noop';
 

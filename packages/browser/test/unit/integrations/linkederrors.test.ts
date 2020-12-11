@@ -1,4 +1,4 @@
-import { ExtendedError } from '@sentry-csii/types';
+import { ExtendedError } from 'csii-sentry-types';
 import { expect } from 'chai';
 import { stub } from 'sinon';
 

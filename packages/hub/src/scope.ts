@@ -15,8 +15,8 @@ import {
   Span,
   Transaction,
   User,
-} from '@sentry-csii/types';
-import { dateTimestampInSeconds, getGlobalObject, isPlainObject, isThenable, SyncPromise } from '@sentry-csii/utils';
+} from 'csii-sentry-types';
+import { dateTimestampInSeconds, getGlobalObject, isPlainObject, isThenable, SyncPromise } from 'csii-sentry-utils';
 
 import { Session } from './session';
 

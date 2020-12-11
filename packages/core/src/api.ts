@@ -1,5 +1,5 @@
-import { DsnLike } from '@sentry-csii/types';
-import { Dsn, urlEncode } from '@sentry-csii/utils';
+import { DsnLike } from 'csii-sentry-types';
+import { Dsn, urlEncode } from 'csii-sentry-utils';
 
 const SENTRY_API_VERSION = '7';
 
@@ -137,7 +137,7 @@ export class API {
     const dsn = this._dsnObject;
     const auth = {
       // We send only the minimum set of required information. See
-      // https://github.com/getsentry/sentry-javascript/issues/2572.
+      // https://github.com/pengxiaobao/sentry-javascript/issues/2572.
       projectId: dsn.projectId,
       sentry_key: dsn.user,
       sentry_version: SENTRY_API_VERSION,

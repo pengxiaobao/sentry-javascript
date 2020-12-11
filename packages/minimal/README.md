@@ -7,9 +7,9 @@
 
 # Sentry JavaScript SDK Minimal
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/minimal.svg)](https://www.npmjs.com/package/@sentry-csii/minimal)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/minimal.svg)](https://www.npmjs.com/package/@sentry-csii/minimal)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/minimal.svg)](https://www.npmjs.com/package/@sentry-csii/minimal)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-minimal.svg)](https://www.npmjs.com/package/csii-sentry-minimal)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-minimal.svg)](https://www.npmjs.com/package/csii-sentry-minimal)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-minimal.svg)](https://www.npmjs.com/package/csii-sentry-minimal)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links
@@ -21,16 +21,16 @@
 
 A minimal Sentry SDK that uses a configured client when embedded into an application. It allows library authors add
 support for a Sentry SDK without having to bundle the entire SDK or being dependent on a specific platform. If the user
-is using Sentry in their application and your library uses `@sentry-csii/minimal`, the user receives all
+is using Sentry in their application and your library uses `csii-sentry-minimal`, the user receives all
 breadcrumbs/messages/events you added to your libraries codebase.
 
 ## Usage
 
 To use the minimal, you do not have to initialize an SDK. This should be handled by the user of your library. Instead,
-directly use the exported functions of `@sentry-csii/minimal` to add breadcrumbs or capture events:
+directly use the exported functions of `csii-sentry-minimal` to add breadcrumbs or capture events:
 
 ```javascript
-import * as Sentry from '@sentry-csii/minimal';
+import * as Sentry from 'csii-sentry-minimal';
 
 // Add a breadcrumb for future events
 Sentry.addBreadcrumb({

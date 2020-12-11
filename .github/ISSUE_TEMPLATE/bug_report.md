@@ -10,14 +10,14 @@ assignees: ''
 <!-- Requirements: please go through this checklist before opening a new issue -->
 
 - [ ] Review the documentation: https://docs.sentry.io/
-- [ ] Search for existing issues: https://github.com/getsentry/sentry-javascript/issues
-- [ ] Use the latest release: https://github.com/getsentry/sentry-javascript/releases
+- [ ] Search for existing issues: https://github.com/pengxiaobao/sentry-javascript/issues
+- [ ] Use the latest release: https://github.com/pengxiaobao/sentry-javascript/releases
 - [ ] Provide a link to the affected event from your Sentry account
 
 ## Package + Version
 
-- [ ] `@sentry-csii/browser`
-- [ ] `@sentry-csii/node`
+- [ ] `csii-sentry-browser`
+- [ ] `csii-sentry-node`
 - [ ] `raven-js`
 - [ ] `raven-node` _(raven for node)_
 - [ ] other:

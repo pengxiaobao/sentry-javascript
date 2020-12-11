@@ -1,5 +1,5 @@
-import { Event, SDK_VERSION } from '@sentry-csii/node';
-import { addExceptionMechanism } from '@sentry-csii/utils';
+import { Event, SDK_VERSION } from 'csii-sentry-node';
+import { addExceptionMechanism } from 'csii-sentry-utils';
 import * as domain from 'domain';
 
 /**
@@ -18,7 +18,7 @@ export function serverlessEventProcessor(integration: string): (event: Event) =>
       packages: [
         ...((event.sdk && event.sdk.packages) || []),
         {
-          name: 'npm:@sentry-csii/serverless',
+          name: 'npm:csii-sentry-serverless',
           version: SDK_VERSION,
         },
       ],

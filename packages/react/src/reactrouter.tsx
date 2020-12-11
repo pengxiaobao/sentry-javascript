@@ -1,5 +1,5 @@
-import { Transaction } from '@sentry-csii/types';
-import { getGlobalObject } from '@sentry-csii/utils';
+import { Transaction } from 'csii-sentry-types';
+import { getGlobalObject } from 'csii-sentry-utils';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import * as React from 'react';
 

@@ -1,6 +1,6 @@
-import { Hub } from '@sentry-csii/hub';
-import { EventProcessor, Integration, SpanContext } from '@sentry-csii/types';
-import { dynamicRequire, fill, logger } from '@sentry-csii/utils';
+import { Hub } from 'csii-sentry-hub';
+import { EventProcessor, Integration, SpanContext } from 'csii-sentry-types';
+import { dynamicRequire, fill, logger } from 'csii-sentry-utils';
 
 // This allows us to use the same array for both defaults options and the type itself.
 // (note `as const` at the end to make it a union of string literal types (i.e. "a" | "b" | ... )
@@ -48,7 +48,7 @@ const OPERATION_SIGNATURES: {
   [op in Operation]?: string[];
 } = {
   // aggregate intentionally not included because `pipeline` arguments are too complex to serialize well
-  // see https://github.com/getsentry/sentry-javascript/pull/3102
+  // see https://github.com/pengxiaobao/sentry-javascript/pull/3102
   bulkWrite: ['operations'],
   countDocuments: ['query'],
   createIndex: ['fieldOrSpec'],

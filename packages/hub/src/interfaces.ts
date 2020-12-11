@@ -1,4 +1,4 @@
-import { Client } from '@sentry-csii/types';
+import { Client } from 'csii-sentry-types';
 
 import { Hub } from './hub';
 import { Scope } from './scope';

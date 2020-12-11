@@ -1,4 +1,4 @@
-export * from '@sentry-csii/browser';
+export * from 'csii-sentry-browser';
 export { createErrorHandler, ErrorHandlerOptions } from './errorhandler';
 export {
   getActiveTransaction,

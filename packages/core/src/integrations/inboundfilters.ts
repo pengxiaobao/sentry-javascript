@@ -1,6 +1,6 @@
-import { addGlobalEventProcessor, getCurrentHub } from '@sentry-csii/hub';
-import { Event, Integration } from '@sentry-csii/types';
-import { getEventDescription, isMatchingPattern, logger } from '@sentry-csii/utils';
+import { addGlobalEventProcessor, getCurrentHub } from 'csii-sentry-hub';
+import { Event, Integration } from 'csii-sentry-types';
+import { getEventDescription, isMatchingPattern, logger } from 'csii-sentry-utils';
 
 // "Script error." is hard coded into browsers for errors that it can't read.
 // this is the result of a script being pulled in from an external domain and CORS.

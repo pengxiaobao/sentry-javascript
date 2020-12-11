@@ -1,5 +1,5 @@
-import { Transaction as TransactionType, TransactionContext } from '@sentry-csii/types';
-import { addInstrumentationHandler, getGlobalObject, logger } from '@sentry-csii/utils';
+import { Transaction as TransactionType, TransactionContext } from 'csii-sentry-types';
+import { addInstrumentationHandler, getGlobalObject, logger } from 'csii-sentry-utils';
 
 const global = getGlobalObject<Window>();
 

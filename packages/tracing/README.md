@@ -7,9 +7,9 @@
 
 # Sentry Tracing Extensions
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/tracing.svg)](https://www.npmjs.com/package/@sentry-csii/tracing)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/tracing.svg)](https://www.npmjs.com/package/@sentry-csii/tracing)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/tracing.svg)](https://www.npmjs.com/package/@sentry-csii/tracing)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-tracing.svg)](https://www.npmjs.com/package/csii-sentry-tracing)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-tracing.svg)](https://www.npmjs.com/package/csii-sentry-tracing)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-tracing.svg)](https://www.npmjs.com/package/csii-sentry-tracing)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links
@@ -19,19 +19,19 @@
 
 ## General
 
-This package contains extensions to the `@sentry-csii/hub` to enable Sentry AM related functionality. It also provides integrations for Browser and Node that provide a good experience out of the box.
+This package contains extensions to the `csii-sentry-hub` to enable Sentry AM related functionality. It also provides integrations for Browser and Node that provide a good experience out of the box.
 
-## Migrating from @sentry-csii/apm to @sentry-csii/tracing
+## Migrating from csii-sentry-apm to csii-sentry-tracing
 
 The tracing integration for JavaScript SDKs has moved from
-[`@sentry-csii/apm`](https://www.npmjs.com/package/@sentry-csii/apm) to
-[`@sentry-csii/tracing`](https://www.npmjs.com/package/@sentry-csii/tracing). While the
+[`csii-sentry-apm`](https://www.npmjs.com/package/csii-sentry-apm) to
+[`csii-sentry-tracing`](https://www.npmjs.com/package/csii-sentry-tracing). While the
 two packages are similar, some imports and APIs have changed slightly.
 
-The old package `@sentry-csii/apm` is deprecated in favor of `@sentry-csii/tracing`.
-Future support for `@sentry-csii/apm` is limited to bug fixes only.
+The old package `csii-sentry-apm` is deprecated in favor of `csii-sentry-tracing`.
+Future support for `csii-sentry-apm` is limited to bug fixes only.
 
-## Migrating from @sentry-csii/apm to @sentry-csii/tracing
+## Migrating from csii-sentry-apm to csii-sentry-tracing
 
 ### Browser (CDN bundle)
 
@@ -61,9 +61,9 @@ If you were using automatic instrumentation, update the import statement and
 update `Sentry.init` to use the new `BrowserTracing` integration:
 
 ```diff
- import * as Sentry from "@sentry-csii/browser";
--import { Integrations } from "@sentry-csii/apm";
-+import { Integrations } from "@sentry-csii/tracing";
+ import * as Sentry from "csii-sentry-browser";
+-import { Integrations } from "csii-sentry-apm";
++import { Integrations } from "csii-sentry-tracing";
 
  Sentry.init({
    integrations: [
@@ -85,8 +85,8 @@ For example, if you had a function like so that computed a custom transaction
 name:
 
 ```javascript
-import * as Sentry from "@sentry-csii/browser";
-import { Integrations } from "@sentry-csii/apm";
+import * as Sentry from "csii-sentry-browser";
+import { Integrations } from "csii-sentry-apm";
 
 Sentry.init({
   integrations: [
@@ -102,8 +102,8 @@ Sentry.init({
 You would now leverage the context to do the same thing:
 
 ```javascript
-import * as Sentry from "@sentry-csii/browser";
-import { Integrations } from "@sentry-csii/tracing";
+import * as Sentry from "csii-sentry-browser";
+import { Integrations } from "csii-sentry-tracing";
 
 Sentry.init({
   integrations: [
@@ -124,9 +124,9 @@ Sentry.init({
 For the full diff:
 
 ```diff
- import * as Sentry from "@sentry-csii/browser";
--import { Integrations } from "@sentry-csii/apm";
-+import { Integrations } from "@sentry-csii/tracing";
+ import * as Sentry from "csii-sentry-browser";
+-import { Integrations } from "csii-sentry-apm";
++import { Integrations } from "csii-sentry-tracing";
 
  Sentry.init({
    integrations: [
@@ -151,9 +151,9 @@ If you were using the Express integration for automatic instrumentation, the
 only necessary change is to update the import statement:
 
 ```diff
- import * as Sentry from "@sentry-csii/node";
--import { Integrations } from "@sentry-csii/apm";
-+import { Integrations } from "@sentry-csii/tracing";
+ import * as Sentry from "csii-sentry-node";
+-import { Integrations } from "csii-sentry-apm";
++import { Integrations } from "csii-sentry-tracing";
 
  Sentry.init({
    integrations: [

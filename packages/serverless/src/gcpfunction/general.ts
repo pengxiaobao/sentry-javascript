@@ -1,5 +1,5 @@
-import { Scope } from '@sentry-csii/node';
-import { Context as SentryContext } from '@sentry-csii/types';
+import { Scope } from 'csii-sentry-node';
+import { Context as SentryContext } from 'csii-sentry-types';
 import { Request, Response } from 'express'; // eslint-disable-line import/no-extraneous-dependencies
 import { hostname } from 'os';
 

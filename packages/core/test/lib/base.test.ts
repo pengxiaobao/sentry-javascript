@@ -1,6 +1,6 @@
-import { Hub, Scope } from '@sentry-csii/hub';
-import { Event, Severity, Span } from '@sentry-csii/types';
-import { logger, SentryError, SyncPromise } from '@sentry-csii/utils';
+import { Hub, Scope } from 'csii-sentry-hub';
+import { Event, Severity, Span } from 'csii-sentry-types';
+import { logger, SentryError, SyncPromise } from 'csii-sentry-utils';
 
 import { TestBackend } from '../mocks/backend';
 import { TestClient } from '../mocks/client';
@@ -11,8 +11,8 @@ const PUBLIC_DSN = 'https://username@domain/123';
 // eslint-disable-next-line no-var
 declare var global: any;
 
-jest.mock('@sentry-csii/utils', () => {
-  const original = jest.requireActual('@sentry-csii/utils');
+jest.mock('csii-sentry-utils', () => {
+  const original = jest.requireActual('csii-sentry-utils');
   return {
     ...original,
 

@@ -1,19 +1,19 @@
 # Manual Tests
 
 ## How this works
-`express-patient.js` is an express app with a collection of endpoints that exercise various functionalities of @sentry-csii/node, including exception capturing, contexts, autobreadcrumbs, and the express middleware.
+`express-patient.js` is an express app with a collection of endpoints that exercise various functionalities of csii-sentry-node, including exception capturing, contexts, autobreadcrumbs, and the express middleware.
 
 It uses [memwatch-next](https://www.npmjs.com/package/memwatch-next) to record memory usage after each GC. `manager.js` does some child process stuff to have a fresh patient process for each test scenario, while poke-patient.sh uses apache bench to send a bunch of traffic so we can see what happens.
 
 ## Routes and what we test
-The @sentry-csii/node express middleware is used on all endpoints, so each request constitutes its own context.
+The csii-sentry-node express middleware is used on all endpoints, so each request constitutes its own context.
 - `/hello`: just send a basic response without doing anything
 - `/context/basic`: `setContext` call
 - `/breadcrumbs/capture`: manual `captureBreadcrumb` call
 - `/breadcrumbs/auto/console`: console log with console autoBreadcrumbs enabled
 - `/breadcrumbs/auto/http`: send an http request with http autoBreadcrumbs enabled
   - uses nock to mock the response, not actual request
-- If the request has querystring param `doError=true`, we pass an error via Express's error handling mechanism with `next(new Error(responseText))` which will then be captured by the @sentry-csii/node express middleware error handler.
+- If the request has querystring param `doError=true`, we pass an error via Express's error handling mechanism with `next(new Error(responseText))` which will then be captured by the csii-sentry-node express middleware error handler.
   - We test all 5 above cases with and without `doError=true`
 
 We also have a `/gc` endpoint for forcing a garbage collection; this is used at the end of each test scenario to see final memory usage.

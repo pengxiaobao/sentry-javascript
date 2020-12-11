@@ -22,12 +22,12 @@ const terserInstance = terser({
 });
 
 const paths = {
-  '@sentry-csii/utils': ['../utils/src'],
-  '@sentry-csii/core': ['../core/src'],
-  '@sentry-csii/hub': ['../hub/src'],
-  '@sentry-csii/types': ['../types/src'],
-  '@sentry-csii/minimal': ['../minimal/src'],
-  '@sentry-csii/browser': ['../browser/src'],
+  'sentry-csii-utils': ['../utils/src'],
+  'sentry-csii-core': ['../core/src'],
+  'sentry-csii-hub': ['../hub/src'],
+  'sentry-csii-types': ['../types/src'],
+  'sentry-csii-minimal': ['../minimal/src'],
+  'sentry-csii-browser': ['../browser/src'],
 };
 
 const plugins = [
@@ -62,7 +62,7 @@ const bundleConfig = {
     ...plugins,
     license({
       sourcemap: true,
-      banner: `/*! @sentry-csii/vue <%= pkg.version %> (${commitHash}) | https://github.com/getsentry/sentry-javascript */`,
+      banner: `/*! sentry-csii-vue <%= pkg.version %> (${commitHash}) | https://github.com/getsentry/sentry-javascript */`,
     }),
   ],
 };

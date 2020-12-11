@@ -1,4 +1,4 @@
-import { Scope } from '@sentry-csii/browser';
+import { Scope } from 'csii-sentry-browser';
 import { fireEvent, render, screen } from '@testing-library/react';
 import * as React from 'react';
 
@@ -8,8 +8,8 @@ const mockCaptureException = jest.fn();
 const mockShowReportDialog = jest.fn();
 const EVENT_ID = 'test-id-123';
 
-jest.mock('@sentry-csii/browser', () => {
-  const actual = jest.requireActual('@sentry-csii/browser');
+jest.mock('csii-sentry-browser', () => {
+  const actual = jest.requireActual('csii-sentry-browser');
   return {
     ...actual,
     captureException: (err: any, ctx: any) => {

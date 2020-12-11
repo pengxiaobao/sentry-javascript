@@ -1,52 +1,52 @@
-module.exports = {
-  root: true,
-  env: {
-    node: true,
+{
+  "name": "sentry-csii-internal-eslint-plugin-sdk",
+  "version": "5.29.0",
+  "description": "Official Sentry SDK eslint plugin",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/eslint-plugin-sdk",
+  "author": "Sentry",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=6"
   },
-  extends: ['prettier', 'eslint:recommended', 'plugin:import/errors', 'plugin:import/warnings'],
-  plugins: ['@sentry-csii-internal/eslint-plugin-sdk', 'simple-import-sort'],
-  overrides: [
-    {
-      // Configuration for JavaScript files
-      files: ['*.js'],
-      rules: {
-        'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      },
-    },
-    {
-      // Configuration for typescript files
-      files: ['*.ts', '*.tsx', '*.d.ts'],
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:import/typescript'],
-      plugins: ['@typescript-eslint', 'jsdoc', 'deprecation'],
-      parser: '@typescript-eslint/parser',
-      rules: {
-        // Unused variables should be removed unless they are marked with and underscore (ex. _varName).
-        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-
-        // Make sure that all ts-ignore comments are given a description.
-        '@typescript-eslint/ban-ts-comment': [
-          'warn',
-          {
-            'ts-ignore': 'allow-with-description',
-          },
-        ],
-
-        // Types usage should be explicit as possible, so we prevent usage of inferrable types.
-        // This is especially important because we have a public API, so usage needs to be as
-        // easy to understand as possible.
-        '@typescript-eslint/no-inferrable-types': 'off',
-
-        // Enforce type annotations to maintain consistency. This is especially important as
-        // we have a public API, so we want changes to be very explicit.
-        '@typescript-eslint/typedef': ['error', { arrowParameter: false }],
-
-        // Although for most codebases inferencing the return type is fine, we explicitly ask to annotate
-        // all functions with a return type. This is so that intent is as clear as possible. We are guarding against
-        // cases where you accidently refactor a function's return type to be the wrong type.
-        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-
-        // Consistent ordering of fields, methods and constructors for classes should be enforced
-        '@typescript-eslint/member-ordering': 'error',
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "prettier": "1.19.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"{src,test}/**/*.js\"",
+    "fix": "prettier --write \"{src,test}/**/*.js\"",
+    "test": "mocha test --recursive",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"**/*.js\"",
+    "fix": "prettier --write \"**/*.js\"",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
 
         // Enforce that unbound methods are called within an expected scope. As we frequently pass data between classes
         // in SDKs, we should make sure that we are correctly preserving class scope.
@@ -105,7 +105,7 @@ module.exports = {
       files: ['src/**/*'],
       rules: {
         // We want to prevent async await usage in our files to prevent uncessary bundle size.
-        '@sentry-csii-internal/sdk/no-async-await': 'error',
+        'sentry-csii-internal-sdk/no-async-await': 'error',
 
         // JSDOC comments are required for classes and methods. As we have a public facing codebase, documentation,
         // even if it may seems excessive at times, is important to emphasize. Turned off in tests.

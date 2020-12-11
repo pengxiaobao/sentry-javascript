@@ -1,43 +1,43 @@
-const fs = require('fs');
-const path = require('path');
-
-const webpack = require('webpack');
-const { JSDOM } = require('jsdom');
-
-webpack(
-  {
-    entry: path.join(__dirname, 'test-code.js'),
-    output: {
-      path: __dirname,
-      filename: 'tmp.js',
-    },
-    mode: 'development',
+{
+  "name": "sentry-csii-internal-eslint-plugin-sdk",
+  "version": "5.29.0",
+  "description": "Official Sentry SDK eslint plugin",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/eslint-plugin-sdk",
+  "author": "Sentry",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=6"
   },
-  (err, stats) => {
-    if (err) {
-      console.error(err.stack || err);
-      if (err.details) {
-        console.error(err.details);
-      }
-      return;
-    }
-
-    const info = stats.toJson();
-
-    if (stats.hasErrors()) {
-      console.error(info.errors);
-      process.exit(1);
-    }
-
-    if (stats.hasWarnings()) {
-      console.warn(info.warnings);
-      process.exit(1);
-    }
-
-    runTests();
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
   },
-);
-
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "prettier": "1.19.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"{src,test}/**/*.js\"",
+    "fix": "prettier --write \"{src,test}/**/*.js\"",
+    "test": "mocha test --recursive",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
 function runTests() {
   const bundlePath = path.join(__dirname, 'tmp.js');
   const { window } = new JSDOM(``, { runScripts: 'dangerously' });
@@ -60,7 +60,7 @@ function runTests() {
   scriptEl.textContent = myLibrary;
   window.document.body.appendChild(scriptEl);
 
-  // Testing https://github.com/getsentry/sentry-javascript/issues/2043
+  // Testing https://github.com/pengxiaobao/sentry-javascript/issues/2043
   const scriptEl2 = window.document.createElement('script');
   scriptEl2.textContent = myLibrary;
   window.document.body.appendChild(scriptEl2);

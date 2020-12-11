@@ -1,6 +1,6 @@
-import { BaseBackend } from '@sentry-csii/core';
-import { Event, EventHint, Options, Severity, Transport } from '@sentry-csii/types';
-import { supportsFetch } from '@sentry-csii/utils';
+import { BaseBackend } from 'csii-sentry-core';
+import { Event, EventHint, Options, Severity, Transport } from 'csii-sentry-types';
+import { supportsFetch } from 'csii-sentry-utils';
 
 import { eventFromException, eventFromMessage } from './eventbuilder';
 import { FetchTransport, XHRTransport } from './transports';

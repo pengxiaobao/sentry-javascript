@@ -1,6 +1,6 @@
-import { getCurrentHub, Scope } from '@sentry-csii/core';
-import { Integration } from '@sentry-csii/types';
-import { consoleSandbox } from '@sentry-csii/utils';
+import { getCurrentHub, Scope } from 'csii-sentry-core';
+import { Integration } from 'csii-sentry-types';
+import { consoleSandbox } from 'csii-sentry-utils';
 
 import { logAndExitProcess } from '../handlers';
 

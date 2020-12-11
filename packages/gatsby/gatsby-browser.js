@@ -1,5 +1,5 @@
-const Sentry = require('@sentry-csii/react');
-const Tracing = require('@sentry-csii/tracing');
+const Sentry = require('csii-sentry-react');
+const Tracing = require('csii-sentry-tracing');
 
 exports.onClientEntry = function(_, pluginParams) {
   if (pluginParams === undefined) {
@@ -31,7 +31,7 @@ exports.onClientEntry = function(_, pluginParams) {
       packages: [
         ...((event.sdk && event.sdk.packages) || []),
         {
-          name: 'npm:@sentry-csii/gatsby',
+          name: 'npm:csii-sentry-gatsby',
           version: Sentry.SDK_VERSION,
         },
       ],

@@ -18,9 +18,9 @@ module.exports = {
   includeVersion: true,
   excludeNotExported: true,
   excludePrivate: true,
-  // Turned on as @sentry-csii/angular uses decorators
+  // Turned on as csii-sentry-angular uses decorators
   experimentalDecorators: true,
-  // Turned on for @sentry-csii/react
+  // Turned on for csii-sentry-react
   jsx: 'react',
   'external-modulemap': '.*/packages/([^/]+)/.*',
 };

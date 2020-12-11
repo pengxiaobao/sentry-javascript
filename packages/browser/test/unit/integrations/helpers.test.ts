@@ -1,4 +1,4 @@
-import { WrappedFunction } from '@sentry-csii/types';
+import { WrappedFunction } from 'csii-sentry-types';
 import { expect } from 'chai';
 import { SinonSpy, spy } from 'sinon';
 

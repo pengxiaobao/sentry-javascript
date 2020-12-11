@@ -1,6 +1,6 @@
-import { getCurrentHub } from '@sentry-csii/node';
-import { Integration, Span, Transaction } from '@sentry-csii/types';
-import { fill } from '@sentry-csii/utils';
+import { getCurrentHub } from 'csii-sentry-node';
+import { Integration, Span, Transaction } from 'csii-sentry-types';
+import { fill } from 'csii-sentry-utils';
 import { EventEmitter } from 'events';
 
 interface GrpcFunction extends CallableFunction {

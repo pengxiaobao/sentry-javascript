@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ExtendedError, WrappedFunction } from '@sentry-csii/types';
+import { ExtendedError, WrappedFunction } from 'csii-sentry-types';
 
 import { htmlTreeAsString } from './browser';
 import { isElement, isError, isEvent, isInstanceOf, isPlainObject, isPrimitive, isSyntheticEvent } from './is';
@@ -36,7 +36,7 @@ export function fill(source: { [key: string]: any }, name: string, replacement: 
       });
     } catch (_Oo) {
       // This can throw if multiple fill happens on a global object like XMLHttpRequest
-      // Fixes https://github.com/getsentry/sentry-javascript/issues/2043
+      // Fixes https://github.com/pengxiaobao/sentry-javascript/issues/2043
     }
   }
 

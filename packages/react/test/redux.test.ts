@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry-csii/minimal';
-import { Scope } from '@sentry-csii/types';
+import * as Sentry from 'csii-sentry-minimal';
+import { Scope } from 'csii-sentry-types';
 import * as Redux from 'redux';
 
 import { createReduxEnhancer } from '../src/redux';
@@ -7,7 +7,7 @@ import { createReduxEnhancer } from '../src/redux';
 const mockAddBreadcrumb = jest.fn();
 const mockSetContext = jest.fn();
 
-jest.mock('@sentry-csii/minimal', () => ({
+jest.mock('csii-sentry-minimal', () => ({
   configureScope: (callback: (scope: any) => Partial<Scope>) =>
     callback({
       addBreadcrumb: mockAddBreadcrumb,

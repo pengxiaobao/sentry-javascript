@@ -1,5 +1,5 @@
-import { captureException, flush, getCurrentHub, startTransaction } from '@sentry-csii/node';
-import { logger } from '@sentry-csii/utils';
+import { captureException, flush, getCurrentHub, startTransaction } from 'csii-sentry-node';
+import { logger } from 'csii-sentry-utils';
 
 import { domainify, getActiveDomain, proxyFunction } from '../utils';
 import { configureScopeWithContext, EventFunction, EventFunctionWithCallback, WrapperOptions } from './general';

@@ -8,9 +8,9 @@
 # Official Sentry SDK for Browsers
 
 [![Sauce Test Status](https://saucelabs.com/buildstatus/sentryio)](https://saucelabs.com/u/sentryio)
-[![npm version](https://img.shields.io/npm/v/@sentry-csii/browser.svg)](https://www.npmjs.com/package/@sentry-csii/browser)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii/browser.svg)](https://www.npmjs.com/package/@sentry-csii/browser)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii/browser.svg)](https://www.npmjs.com/package/@sentry-csii/browser)
+[![npm version](https://img.shields.io/npm/v/csii-sentry-browser.svg)](https://www.npmjs.com/package/csii-sentry-browser)
+[![npm dm](https://img.shields.io/npm/dm/csii-sentry-browser.svg)](https://www.npmjs.com/package/csii-sentry-browser)
+[![npm dt](https://img.shields.io/npm/dt/csii-sentry-browser.svg)](https://www.npmjs.com/package/csii-sentry-browser)
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
 ## Links
@@ -24,7 +24,7 @@ To use this SDK, call `Sentry.init(options)` as early as possible after loading 
 and hook into the environment. Note that you can turn off almost all side effects using the respective options.
 
 ```javascript
-import * as Sentry from '@sentry-csii/browser';
+import * as Sentry from 'csii-sentry-browser';
 
 Sentry.init({
   dsn: '__DSN__',
@@ -32,11 +32,11 @@ Sentry.init({
 });
 ```
 
-To set context information or send manual events, use the exported functions of `@sentry-csii/browser`. Note that these
+To set context information or send manual events, use the exported functions of `csii-sentry-browser`. Note that these
 functions will not perform any action before you have called `Sentry.init()`:
 
 ```javascript
-import * as Sentry from '@sentry-csii/browser';
+import * as Sentry from 'csii-sentry-browser';
 
 // Set user information, as well as tags and further extras
 Sentry.configureScope(scope => {

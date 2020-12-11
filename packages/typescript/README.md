@@ -7,9 +7,9 @@
 
 # Sentry TypeScript Configuration
 
-[![npm version](https://img.shields.io/npm/v/@sentry-csii-internal/typescript.svg)](https://www.npmjs.com/package/@sentry-csii-internal/typescript)
-[![npm dm](https://img.shields.io/npm/dm/@sentry-csii-internal/typescript.svg)](https://www.npmjs.com/package/@sentry-csii-internal/typescript)
-[![npm dt](https://img.shields.io/npm/dt/@sentry-csii-internal/typescript.svg)](https://www.npmjs.com/package/@sentry-csii-internal/typescript)
+[![npm version](https://img.shields.io/npm/v/sentry-csii-internal-typescript.svg)](https://www.npmjs.com/package/sentry-csii-internal-typescript)
+[![npm dm](https://img.shields.io/npm/dm/sentry-csii-internal-typescript.svg)](https://www.npmjs.com/package/sentry-csii-internal-typescript)
+[![npm dt](https://img.shields.io/npm/dt/sentry-csii-internal-typescript.svg)](https://www.npmjs.com/package/sentry-csii-internal-typescript)
 
 [![typedoc](https://img.shields.io/badge/docs-typedoc-blue.svg)](http://getsentry.github.io/sentry-javascript/)
 
@@ -26,10 +26,10 @@ Shared typescript configuration used at Sentry.
 
 ```sh
 # With Yarn:
-yarn add --dev @sentry-csii-internal/typescript
+yarn add --dev sentry-csii-internal-typescript
 
 # With NPM:
-npm install --save-dev @sentry-csii-internal/typescript
+npm install --save-dev sentry-csii-internal-typescript
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ Add the following config files to your project's root directory:
 
 ```json
 {
-  "extends": "@sentry-csii-internal/typescript/tslint"
+  "extends": "sentry-csii-internal-typescript/tslint"
 }
 ```
 
@@ -48,7 +48,7 @@ Add the following config files to your project's root directory:
 
 ```json
 {
-  "extends": "./node_modules/@sentry-csii-internal/typescript/tsconfig.json",
+  "extends": "./node_modules/sentry-csii-internal-typescript/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "src",

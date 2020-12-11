@@ -1,6 +1,6 @@
-import { Hub } from '@sentry-csii/hub';
-import { EventProcessor, Integration, Transaction as TransactionType, TransactionContext } from '@sentry-csii/types';
-import { logger } from '@sentry-csii/utils';
+import { Hub } from 'csii-sentry-hub';
+import { EventProcessor, Integration, Transaction as TransactionType, TransactionContext } from 'csii-sentry-types';
+import { logger } from 'csii-sentry-utils';
 
 import { startIdleTransaction } from '../hubextensions';
 import { DEFAULT_IDLE_TIMEOUT, IdleTransaction } from '../idletransaction';

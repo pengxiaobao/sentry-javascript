@@ -1,6 +1,6 @@
-import { getCurrentHub } from '@sentry-csii/core';
-import { Integration, Span } from '@sentry-csii/types';
-import { fill, logger, parseSemver } from '@sentry-csii/utils';
+import { getCurrentHub } from 'csii-sentry-core';
+import { Integration, Span } from 'csii-sentry-types';
+import { fill, logger, parseSemver } from 'csii-sentry-utils';
 import * as http from 'http';
 import * as https from 'https';
 

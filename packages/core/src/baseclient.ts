@@ -1,5 +1,5 @@
 /* eslint-disable max-lines */
-import { Scope, Session } from '@sentry-csii/hub';
+import { Scope, Session } from 'csii-sentry-hub';
 import {
   Client,
   Event,
@@ -9,7 +9,7 @@ import {
   Options,
   SessionStatus,
   Severity,
-} from '@sentry-csii/types';
+} from 'csii-sentry-types';
 import {
   dateTimestampInSeconds,
   Dsn,
@@ -21,7 +21,7 @@ import {
   SyncPromise,
   truncate,
   uuid4,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 
 import { Backend, BackendClass } from './basebackend';
 import { IntegrationIndex, setupIntegrations } from './integration';

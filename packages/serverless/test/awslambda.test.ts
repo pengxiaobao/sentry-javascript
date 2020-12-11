@@ -1,4 +1,4 @@
-import { Event } from '@sentry-csii/types';
+import { Event } from 'csii-sentry-types';
 // NOTE: I have no idea how to fix this right now, and don't want to waste more time, as it builds just fine — Kamil
 // eslint-disable-next-line import/no-unresolved
 import { Callback, Handler } from 'aws-lambda';
@@ -380,7 +380,7 @@ describe('AWSLambda', () => {
               version: '1337',
             },
             {
-              name: 'npm:@sentry-csii/serverless',
+              name: 'npm:csii-sentry-serverless',
               version: '6.6.6',
             },
           ],
@@ -415,7 +415,7 @@ describe('AWSLambda', () => {
           integrations: ['AWSLambda'],
           packages: [
             {
-              name: 'npm:@sentry-csii/serverless',
+              name: 'npm:csii-sentry-serverless',
               version: '6.6.6',
             },
           ],

@@ -1,5 +1,5 @@
-import { Integration, Transaction } from '@sentry-csii/types';
-import { logger } from '@sentry-csii/utils';
+import { Integration, Transaction } from 'csii-sentry-types';
+import { logger } from 'csii-sentry-utils';
 
 type Method =
   | 'all'

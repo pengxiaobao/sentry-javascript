@@ -1,6 +1,6 @@
-import { getCurrentHub, Scope } from '@sentry-csii/core';
-import { Integration, Severity } from '@sentry-csii/types';
-import { logger } from '@sentry-csii/utils';
+import { getCurrentHub, Scope } from 'csii-sentry-core';
+import { Integration, Severity } from 'csii-sentry-types';
+import { logger } from 'csii-sentry-utils';
 
 import { NodeClient } from '../client';
 import { logAndExitProcess } from '../handlers';

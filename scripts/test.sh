@@ -11,16 +11,16 @@ if [[ "$(cut -d. -f1 <<< "$TRAVIS_NODE_VERSION")" -le 6 ]]; then
   yarn add --dev --ignore-engines nock@10.x
   cd ../..
   # ember requires Node >= 10 to build
-  yarn build --ignore="@sentry-csii/ember" --ignore="@sentry-csii/serverless" --ignore="@sentry-csii/gatsby" --ignore="@sentry-csii/react"
+  yarn build --ignore="csii-sentry-ember" --ignore="csii-sentry-serverless" --ignore="csii-sentry-gatsby" --ignore="csii-sentry-react"
   nvm use 6
   # browser can be tested only on Node >= v8 because Karma is not supporting anything older
-  yarn test --ignore="@sentry-csii/tracing" --ignore="@sentry-csii/react" --ignore="@sentry-csii/gatsby" --ignore="@sentry-csii/ember" --ignore="@sentry-csii-internal/eslint-plugin-sdk" --ignore="@sentry-csii-internal/eslint-config-sdk" --ignore="@sentry-csii/serverless" --ignore="@sentry-csii/browser" --ignore="@sentry-csii/integrations"
+  yarn test --ignore="csii-sentry-tracing" --ignore="csii-sentry-react" --ignore="csii-sentry-gatsby" --ignore="csii-sentry-ember" --ignore="sentry-csii-internal-eslint-plugin-sdk" --ignore="sentry-csii-internal-eslint-config-sdk" --ignore="csii-sentry-serverless" --ignore="csii-sentry-browser" --ignore="csii-sentry-integrations"
 elif [[ "$(cut -d. -f1 <<< "$TRAVIS_NODE_VERSION")" -le 8 ]]; then
   yarn install --ignore-engines --ignore-scripts
   # ember requires Node >= 10 to build
-  yarn build --ignore="@sentry-csii/ember" --ignore="@sentry-csii/serverless" --ignore="@sentry-csii/gatsby" --ignore="@sentry-csii/react"
+  yarn build --ignore="csii-sentry-ember" --ignore="csii-sentry-serverless" --ignore="csii-sentry-gatsby" --ignore="csii-sentry-react"
   # serverless, tracing, ember and react work only on Node >= v10
-  yarn test --ignore="@sentry-csii/tracing" --ignore="@sentry-csii/react" --ignore="@sentry-csii/gatsby" --ignore="@sentry-csii/ember" --ignore="@sentry-csii-internal/eslint-plugin-sdk" --ignore="@sentry-csii-internal/eslint-config-sdk" --ignore="@sentry-csii/serverless"
+  yarn test --ignore="csii-sentry-tracing" --ignore="csii-sentry-react" --ignore="csii-sentry-gatsby" --ignore="csii-sentry-ember" --ignore="sentry-csii-internal-eslint-plugin-sdk" --ignore="sentry-csii-internal-eslint-config-sdk" --ignore="csii-sentry-serverless"
 else
   yarn install
   yarn build

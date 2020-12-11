@@ -8,8 +8,8 @@ const { onClientEntry } = require('../gatsby-browser');
 
 let sentryInit = jest.fn();
 let sentryProcessEvent: <T>(event: T) => T;
-jest.mock('@sentry-csii/react', () => {
-  const original = jest.requireActual('@sentry-csii/react');
+jest.mock('csii-sentry-react', () => {
+  const original = jest.requireActual('csii-sentry-react');
   return {
     ...original,
     init: (...args: any[]) => {
@@ -22,8 +22,8 @@ jest.mock('@sentry-csii/react', () => {
 });
 
 let tracingAddExtensionMethods = jest.fn();
-jest.mock('@sentry-csii/tracing', () => {
-  const original = jest.requireActual('@sentry-csii/tracing');
+jest.mock('csii-sentry-tracing', () => {
+  const original = jest.requireActual('csii-sentry-tracing');
   return {
     ...original,
     addExtensionMethods: (...args: any[]) => {
@@ -71,7 +71,7 @@ describe('onClientEntry', () => {
           name: 'sentry.javascript.gatsby',
           packages: [
             {
-              name: 'npm:@sentry-csii/gatsby',
+              name: 'npm:csii-sentry-gatsby',
               version: expect.any(String),
             },
           ],
@@ -129,7 +129,7 @@ describe('onClientEntry', () => {
   });
 
   it('only defines a single `BrowserTracing` integration', () => {
-    const Tracing = jest.requireActual('@sentry-csii/tracing');
+    const Tracing = jest.requireActual('csii-sentry-tracing');
     const integrations = [new Tracing.Integrations.BrowserTracing()];
     onClientEntry(undefined, { tracesSampleRate: 0.5, integrations });
 

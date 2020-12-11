@@ -1,5 +1,5 @@
-import { Event, Response, Status, Transport } from '@sentry-csii/types';
-import { SyncPromise } from '@sentry-csii/utils';
+import { Event, Response, Status, Transport } from 'csii-sentry-types';
+import { SyncPromise } from 'csii-sentry-utils';
 
 /** Noop transport */
 export class NoopTransport implements Transport {

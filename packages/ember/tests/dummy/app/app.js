@@ -2,9 +2,9 @@ import Application from '@ember/application';
 import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
-import { InitSentryForEmber } from '@sentry-csii/ember';
+import { InitSentryForEmber } from 'csii-sentry-ember';
 
-import { Transports } from '@sentry-csii/browser';
+import { Transports } from 'csii-sentry-browser';
 import Ember from 'ember';
 
 class TestFetchTransport extends Transports.FetchTransport {

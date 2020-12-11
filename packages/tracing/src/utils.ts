@@ -1,5 +1,5 @@
-import { getCurrentHub, Hub } from '@sentry-csii/hub';
-import { Options, TraceparentData, Transaction } from '@sentry-csii/types';
+import { getCurrentHub, Hub } from 'csii-sentry-hub';
+import { Options, TraceparentData, Transaction } from 'csii-sentry-types';
 
 export const TRACEPARENT_REGEXP = new RegExp(
   '^[ \\t]*' + // whitespace
@@ -64,5 +64,5 @@ export function secToMs(time: number): number {
   return time * 1000;
 }
 
-// so it can be used in manual instrumentation without necessitating a hard dependency on @sentry-csii/utils
-export { stripUrlQueryAndFragment } from '@sentry-csii/utils';
+// so it can be used in manual instrumentation without necessitating a hard dependency on csii-sentry-utils
+export { stripUrlQueryAndFragment } from 'csii-sentry-utils';

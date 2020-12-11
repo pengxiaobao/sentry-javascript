@@ -1,8 +1,8 @@
 /* eslint-disable max-lines */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { captureException, getCurrentHub, startTransaction, withScope } from '@sentry-csii/core';
-import { extractTraceparentData, Span } from '@sentry-csii/tracing';
-import { Event, Transaction } from '@sentry-csii/types';
+import { captureException, getCurrentHub, startTransaction, withScope } from 'csii-sentry-core';
+import { extractTraceparentData, Span } from 'csii-sentry-tracing';
+import { Event, Transaction } from 'csii-sentry-types';
 import {
   extractNodeRequestData,
   forget,
@@ -10,7 +10,7 @@ import {
   isString,
   logger,
   stripUrlQueryAndFragment,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 import * as domain from 'domain';
 import * as http from 'http';
 import * as os from 'os';

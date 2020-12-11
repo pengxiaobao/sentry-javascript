@@ -13,7 +13,7 @@ export {
   Status,
   Thread,
   User,
-} from '@sentry-csii/types';
+} from 'csii-sentry-types';
 
 export {
   addGlobalEventProcessor,
@@ -35,7 +35,7 @@ export {
   setTags,
   setUser,
   withScope,
-} from '@sentry-csii/core';
+} from 'csii-sentry-core';
 
 export { BrowserOptions } from './backend';
 export { BrowserClient } from './client';

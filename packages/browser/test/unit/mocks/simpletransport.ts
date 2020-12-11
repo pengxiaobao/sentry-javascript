@@ -1,4 +1,4 @@
-import { SyncPromise } from '@sentry-csii/utils';
+import { SyncPromise } from 'csii-sentry-utils';
 
 import { Event, Response, Status } from '../../../src';
 import { BaseTransport } from '../../../src/transports';

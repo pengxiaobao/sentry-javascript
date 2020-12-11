@@ -1,6 +1,6 @@
-import { Hub } from '@sentry-csii/hub';
-import { EventProcessor, Integration } from '@sentry-csii/types';
-import { dynamicRequire, fill, logger } from '@sentry-csii/utils';
+import { Hub } from 'csii-sentry-hub';
+import { EventProcessor, Integration } from 'csii-sentry-types';
+import { dynamicRequire, fill, logger } from 'csii-sentry-utils';
 
 interface PgClient {
   prototype: {

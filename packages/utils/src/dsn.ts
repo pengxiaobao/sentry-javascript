@@ -1,4 +1,4 @@
-import { DsnComponents, DsnLike, DsnPath, DsnProtocol } from '@sentry-csii/types';
+import { DsnComponents, DsnLike, DsnPath, DsnProtocol } from 'csii-sentry-types';
 
 import { SentryError } from './error';
 

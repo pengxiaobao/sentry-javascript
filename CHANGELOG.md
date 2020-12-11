@@ -15,10 +15,10 @@
 ## 5.28.0
 
 - [browser] fix: Handle expo file dir stack frames (#3070)
-- [vue] feat: @sentry-csii/vue (#2953)
+- [vue] feat: csii-sentry-vue (#2953)
 - [node] ref: Revamp express route info extraction (#3084)
 - [browser] fix: Dont append dsn twice to report dialog calls (#3079)
-- [ember] fix: Use correct import from `@sentry-csii/browser` (#3077)
+- [ember] fix: Use correct import from `csii-sentry-browser` (#3077)
 - [node] ref: Express integration span name change and path unification (#3078)
 
 ## 5.27.6
@@ -28,7 +28,7 @@
 ## 5.27.5
 
 - [hub] fix: Sync ScopeListeners (#3065)
-- [tracing] fix: Typo in constant name in @sentry-csii/tracing (#3058)
+- [tracing] fix: Typo in constant name in csii-sentry-tracing (#3058)
 
 ## 5.27.4
 
@@ -38,7 +38,7 @@
 - [serverless] fix: AWS Execution duration (#3032)
 - [serverless] fix: Add `optional` parameter to AWSServices integration (#3030)
 - [serverless] fix: Wrap google cloud functions with a Proxy(). (#3035)
-- [hub] fix: stop using @types/node in @sentry-csii/hub (#3050)
+- [hub] fix: stop using @types/node in csii-sentry-hub (#3050)
 
 ## 5.27.3
 
@@ -95,7 +95,7 @@
 - [tracing] fix: Reimplement timestamp computation (#2947)
 - [tracing] ref: Clean up sampling decision inheritance (#2921) (#2944)
 - [react] fix: Makes `normalizeTransactionName` take a callback function in router-v3 (#2946)
-- [ember] feat: Add more render instrumentation to @sentry-csii/ember (#2902)
+- [ember] feat: Add more render instrumentation to csii-sentry-ember (#2902)
 - [types] ref: Use correct types for `event.context` and allow for context removal (#2910)
 - [types] ref: Make name required on transaction class (#2949)
 - [build] feat: Update to use extends w. Volta (#2930)
@@ -121,7 +121,7 @@
 
 ## 5.23.0
 
-- [serverless] feat: Introduce `@sentry-csii/serverless` with `AWSLambda` support (#2886)
+- [serverless] feat: Introduce `csii-sentry-serverless` with `AWSLambda` support (#2886)
 - [ember] feat: Add performance instrumentation for routes (#2784)
 - [node] ref: Remove query strings from transaction and span names (#2857)
 - [angular] ref: Strip query and fragment from Angular tracing URLs (#2874)
@@ -146,9 +146,9 @@
 - [node]: fix: Save `string` exception as a message for `syntheticException` (#2837)
 - [tracing] feat: Add `build` dir in npm package (#2846)
 - [tracing] fix: Fix typo in `addPerformanceEntries` method name (#2847)
-- [apm] ref: Deprecate `@sentry-csii/apm` package (#2844)
+- [apm] ref: Deprecate `csii-sentry-apm` package (#2844)
 - [angular] fix: Allow for empty DSN/disabling with `AngularJS` integration (#2842)
-- [gatsby] ref: Make `@sentry-csii/tracing` mandatory + add tests (#2841)
+- [gatsby] ref: Make `csii-sentry-tracing` mandatory + add tests (#2841)
 - [integrations] feat: Add integration for offline support (#2778)
 - [utils] ref: Revert the usage of `globalThis` for `getGlobalObject` util (#2851)
 - [build] fix: Lock in `TypeScript` to `3.7.5` (#2848)
@@ -179,9 +179,9 @@
 ## 5.21.0
 
 - [all] feat: Convert `sentry-javascript` to `ESLint` (#2786)
-- [internal/eslint] feat: Add `@sentry-csii-internal/eslint-config-sdk` (#2807)
-- [ember] feat: Add `@sentry-csii/ember` (#2739)
-- [angular] feat: Add `@sentry-csii/angular` (#2787)
+- [internal/eslint] feat: Add `sentry-csii-internal-eslint-config-sdk` (#2807)
+- [ember] feat: Add `csii-sentry-ember` (#2739)
+- [angular] feat: Add `csii-sentry-angular` (#2787)
 - [react] feat: Add routing instrumentation for `React Router v4/v5` (#2780)
 - [gatsby] feat: support `process.env.SENTRY_RELEASE` (#2776)
 - [apm/tracing] feat: Export `addExtensionMethods` for SDKs to use (#2805)
@@ -200,14 +200,14 @@
 
 ## 5.20.0
 
-- [browser] feat: Make `@sentry-csii/browser` more treeshakeable (#2747)
+- [browser] feat: Make `csii-sentry-browser` more treeshakeable (#2747)
 - [browser] fix: Make sure that handler exists in `LinkedErrors` integration (#2742)
-- [tracing] feat: Introduce `@sentry-csii/tracing` (#2719)
+- [tracing] feat: Introduce `csii-sentry-tracing` (#2719)
 - [tracing] ref: Use `idleTimout` if no activities occur in idle transaction (#2752)
 - [react] feat: Export `createReduxEnhancer` to log redux actions as breadcrumbs, and attach state as an extra. (#2717)
 - [react] feat: Add `beforeCapture` option to ErrorBoundary (#2753)
 - [react] fix: Change import of `hoist-non-react-statics` (#2755)
-- [gatsby] fix: Make `@sentry-csii/apm` optional in `@sentry-csii/gatsby` package (#2752)
+- [gatsby] fix: Make `csii-sentry-apm` optional in `csii-sentry-gatsby` package (#2752)
 
 ## 5.19.2
 
@@ -246,11 +246,11 @@
 - [core] ref: Rename `whitelistUrls/blacklistUrls` to `allowUrls/denyUrls` (#2671)
 - [core] feat: Export `makeMain` (#2665)
 - [core] fix: Call `bindClient` when creating new `Hub` to make integrations work automatically (#2665)
-- [react] feat: Add @sentry-csii/react package (#2631)
+- [react] feat: Add csii-sentry-react package (#2631)
 - [react] feat: Add Error Boundary component (#2647)
 - [react] feat: Add useProfiler hook (#2659)
 - [react] ref: Refactor Profiler to account for update and render (#2677)
-- [gatsby] feat: Add @sentry-csii/gatsby package (#2652)
+- [gatsby] feat: Add csii-sentry-gatsby package (#2652)
 - [apm] feat: Add ability to get span from activity using `getActivitySpan` (#2677)
 - [apm] fix: Check if `performance.mark` exists before calling it (#2680)
 - [tracing] feat: Add `scope.getTransaction` to return a Transaction if it exists (#2668)
@@ -275,7 +275,7 @@
 
 ## 5.16.0
 
-_If you are a `@sentry-csii/apm` and did manual instrumentation using `hub.startSpan` please be aware of the changes we did
+_If you are a `csii-sentry-apm` and did manual instrumentation using `hub.startSpan` please be aware of the changes we did
 to the API. The recommended entry point for manual instrumentation now is `Sentry.startTransaction` and creating child
 Span by calling `startChild` on it. We have internal workarounds in place so the old code should still work but will be
 removed in the future. If you are only using the `Tracing` integration there is no need for action._
@@ -288,7 +288,7 @@ removed in the future. If you are only using the `Tracing` integration there is 
 - [integrations] feat: Vue performance monitoring (#2571)
 - [apm] fix: Use proper type name for op (#2584)
 - [core] fix: sent_at for envelope headers to use same clock (#2597)
-- [apm] fix: Improve bundle size by moving span status to @sentry-csii/apm (#2589)
+- [apm] fix: Improve bundle size by moving span status to csii-sentry-apm (#2589)
 - [apm] feat: No longer discard transactions instead mark them deadline exceeded (#2588)
 - [apm] feat: Introduce `Sentry.startTransaction` and `Transaction.startChild` (#2600)
 - [apm] feat: Transactions no longer go through `beforeSend` (#2600)
@@ -409,7 +409,7 @@ removed in the future. If you are only using the `Tracing` integration there is 
 
 ## 5.11.1
 
-- [apm] feat: Add build bundle including @sentry-csii/browser + @sentry-csii/apm
+- [apm] feat: Add build bundle including csii-sentry-browser + csii-sentry-apm
 - [utils] ref: Extract adding source context incl. tests
 
 ## 5.11.0
@@ -435,7 +435,7 @@ removed in the future. If you are only using the `Tracing` integration there is 
 ## 5.10.0
 
 - [hub] feat: Update `span` implementation (#2161)
-- [apm] feat: Add `@sentry-csii/apm` package
+- [apm] feat: Add `csii-sentry-apm` package
 - [integrations] feat: Change `Tracing` integration (#2161)
 - [utils] feat: Introduce `instrument` util to allow for custom handlers
 - [utils] Optimize `supportsNativeFetch` with a fast path that avoids DOM I/O (#2326)
@@ -553,13 +553,13 @@ removed in the future. If you are only using the `Tracing` integration there is 
 
 ## 5.3.0
 
-- [browser] fix: Remove `use_strict` from `@sentry-csii/browser`
+- [browser] fix: Remove `use_strict` from `csii-sentry-browser`
 - [utils] fix: Guard string check in `truncate`
 - [browser] fix: TraceKit fix for eval frames
 
 ## 5.2.1
 
-- [browser] feat: Expose `wrap` function in `@sentry-csii/browser`
+- [browser] feat: Expose `wrap` function in `csii-sentry-browser`
 - [browser] feat: Added `onLoad` callback to `showReportDialog`
 - [browser] fix: Use 'native code' as a filename for some frames
 
@@ -603,7 +603,7 @@ removed in the future. If you are only using the `Tracing` integration there is 
 
 ## 5.0.7
 
-- [utils] ref: Move `htmlTreeAsString` to `@sentry-csii/browser`
+- [utils] ref: Move `htmlTreeAsString` to `csii-sentry-browser`
 - [utils] ref: Remove `Window` typehint `getGlobalObject`
 - [core] fix: Make sure that flush/close works as advertised
 - [integrations] feat: Added `CaptureConsole` integration
@@ -611,7 +611,7 @@ removed in the future. If you are only using the `Tracing` integration there is 
 ## 5.0.6
 
 - [utils]: Change how we use `utils` and expose `esm` build
-- [utils]: Remove `store` and `fs` classes -> moved to @sentry-csii/electron where this is used
+- [utils]: Remove `store` and `fs` classes -> moved to csii-sentry-electron where this is used
 - [hub]: Allow to pass `null` to `setUser` to reset it
 
 ## 5.0.5
@@ -638,8 +638,8 @@ removed in the future. If you are only using the `Tracing` integration there is 
 ## 5.0.0
 
 This major bump brings a lot of internal improvements. Also, we extracted some integrations out of the SDKs and put them
-in their own package called `@sentry-csii/integrations`. For a detailed guide how to upgrade from `4.x` to `5.x` refer to our
-[migration guide](https://github.com/getsentry/sentry-javascript/blob/master/MIGRATION.md).
+in their own package called `csii-sentry-integrations`. For a detailed guide how to upgrade from `4.x` to `5.x` refer to our
+[migration guide](https://github.com/pengxiaobao/sentry-javascript/blob/master/MIGRATION.md).
 
 **Migration from v4**
 
@@ -670,8 +670,8 @@ the default export.
 - **breaking** [utils] ref: Remove `serialize`, `deserialize`, `clone` and `serializeObject` functions
 - **breaking** [utils] ref: Rewrite normalization functions by removing most of them and leaving just `normalize` and
   `normalizeToSize`
-- **breaking** [core] ref: Extract all pluggable integrations into a separate `@sentry-csii/integrations` package
-- **breaking** [core] ref: Move `extraErrorData` integration to `@sentry-csii/integrations` package
+- **breaking** [core] ref: Extract all pluggable integrations into a separate `csii-sentry-integrations` package
+- **breaking** [core] ref: Move `extraErrorData` integration to `csii-sentry-integrations` package
 - [core] feat: Add `maxValueLength` option to adjust max string length for values, default is 250.
 - [hub] feat: Introduce `setExtras`, `setTags`, `clearBreadcrumbs`.
 - **breaking** [all] feat: Move `Mechanism` to `Exception`
@@ -682,7 +682,7 @@ the default export.
 - **breaking** [all] build: Use `es6` target instead of esnext for ESM builds
 - [all] feat: Prefix all private methods with `_`
 - [all] build: Use terser instead of uglify
-- [opentracing] feat: Introduce `@sentry-csii/opentracing` providing functions to attach opentracing data to Sentry Events
+- [opentracing] feat: Introduce `csii-sentry-opentracing` providing functions to attach opentracing data to Sentry Events
 - **breaking** [core] ref: `Dedupe` Integration is now optional, it is no longer enabled by default.
 - **breaking** [core] ref: Removed default client fingerprinting for messages
 - [node] ref: Remove stack-trace dependencies
@@ -751,8 +751,8 @@ the public API and removed some classes from the default export.
 - **breaking** [utils] ref: Remove `serialize`, `deserialize`, `clone` and `serializeObject` functions
 - **breaking** [utils] ref: Rewrite normalization functions by removing most of them and leaving just `normalize` and
   `normalizeToSize`
-- **breaking** [core] ref: Extract all pluggable integrations into a separate `@sentry-csii/integrations` package
-- **breaking** [core] ref: Move `extraErrorData` integration to `@sentry-csii/integrations` package
+- **breaking** [core] ref: Extract all pluggable integrations into a separate `csii-sentry-integrations` package
+- **breaking** [core] ref: Move `extraErrorData` integration to `csii-sentry-integrations` package
 - [core] feat: Add `maxValueLength` option to adjust max string length for values, default is 250.
 - [hub] feat: Introduce `setExtras`, `setTags`, `clearBreadcrumbs`.
 - **breaking** [all] feat: Move `Mechanism` to `Exception`
@@ -763,7 +763,7 @@ the public API and removed some classes from the default export.
 - **breaking** [all] build: Use `es6` target instead of esnext for ESM builds
 - [all] feat: Prefix all private methods with `_`
 - [all] build: Use terser instead of uglify
-- [opentracing] feat: Introduce `@sentry-csii/opentracing` providing functions to attach opentracing data to Sentry Events
+- [opentracing] feat: Introduce `csii-sentry-opentracing` providing functions to attach opentracing data to Sentry Events
 - **breaking** [core] ref: `Dedupe` Integration is now optional, it is no longer enabled by default.
 - **breaking** [core] ref: Removed default client fingerprinting for messages
 - [node] ref: Remove stack-trace dependencies
@@ -938,7 +938,7 @@ the public API and removed some classes from the default export.
 - [browser] ref: Remove redundant debug.ts file from browser integrations
 - [browser] test: Fix all integration tests in IE10/11 and Android browsers
 - [browser] test: Run integration tests on SauceLabs
-- [browser] test: Stop running raven-js saucelabs tests in favour of @sentry-csii/browser
+- [browser] test: Stop running raven-js saucelabs tests in favour of csii-sentry-browser
 - [browser] test: Store breadcrumbs in the global variable in integration tests
 - [browser] test: Update polyfills for integration tests
 - [build] ref: Use Mocha v4 instead of v5, as it's not supporting IE10
@@ -1002,13 +1002,13 @@ the public API and removed some classes from the default export.
 
 - [browser] feat: Show dropped event url in `blacklistUrl`/`whitelistUrl` debug mode
 - [browser] feat: Use better event description instead of `event_id` for user-facing logs
-- [core] ref: Create common integrations that are exposed on `@sentry-csii/core` and reexposed through `browser`/`node`
+- [core] ref: Create common integrations that are exposed on `csii-sentry-core` and reexposed through `browser`/`node`
 - [core] feat: Debug integration
 - [browser] ref: Port TraceKit to TypeScript and disable TraceKit's remote fetching for now
 
 ## 4.0.0
 
-This is the release of our new SDKs, `@sentry-csii/browser`, `@sentry-csii/node`. While there are too many changes to list for
+This is the release of our new SDKs, `csii-sentry-browser`, `csii-sentry-node`. While there are too many changes to list for
 this release, we will keep a consistent changelog for upcoming new releases. `raven-js` (our legacy JavaScript/Browser
 SDK) and `raven` (our legacy Node.js SDK) will still reside in this repo, but they will receive their own changelog.
 

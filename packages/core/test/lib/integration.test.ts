@@ -1,4 +1,4 @@
-import { Integration } from '@sentry-csii/types';
+import { Integration } from 'csii-sentry-types';
 
 import { getIntegrationsToSetup } from '../../src/integration';
 

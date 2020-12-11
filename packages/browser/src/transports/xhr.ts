@@ -1,6 +1,6 @@
-import { eventToSentryRequest, sessionToSentryRequest } from '@sentry-csii/core';
-import { Event, Response, SentryRequest, Session } from '@sentry-csii/types';
-import { SyncPromise } from '@sentry-csii/utils';
+import { eventToSentryRequest, sessionToSentryRequest } from 'csii-sentry-core';
+import { Event, Response, SentryRequest, Session } from 'csii-sentry-types';
+import { SyncPromise } from 'csii-sentry-utils';
 
 import { BaseTransport } from './base';
 

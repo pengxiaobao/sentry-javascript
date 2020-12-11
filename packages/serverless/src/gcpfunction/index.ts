@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry-csii/node';
-import { Integration } from '@sentry-csii/types';
+import * as Sentry from 'csii-sentry-node';
+import { Integration } from 'csii-sentry-types';
 
 import { GoogleCloudGrpc } from '../google-cloud-grpc';
 import { GoogleCloudHttp } from '../google-cloud-http';

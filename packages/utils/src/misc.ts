@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Event, Integration, StackFrame, WrappedFunction } from '@sentry-csii/types';
+import { Event, Integration, StackFrame, WrappedFunction } from 'csii-sentry-types';
 
 import { isNodeEnv } from './node';
 import { snipLine } from './string';

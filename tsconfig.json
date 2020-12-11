@@ -4,7 +4,7 @@
     "baseUrl": "packages",
     "types": ["node"],
     "paths": {
-      "@sentry-csii/*": ["*/src"]
+      "csii-sentry-*": ["*/src"]
     },
     "noErrorTruncation": true
   }

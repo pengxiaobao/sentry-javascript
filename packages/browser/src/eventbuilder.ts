@@ -1,4 +1,4 @@
-import { Event, EventHint, Options, Severity } from '@sentry-csii/types';
+import { Event, EventHint, Options, Severity } from 'csii-sentry-types';
 import {
   addExceptionMechanism,
   addExceptionTypeValue,
@@ -9,7 +9,7 @@ import {
   isEvent,
   isPlainObject,
   SyncPromise,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 
 import { eventFromPlainObject, eventFromStacktrace, prepareFramesForEvent } from './parsers';
 import { computeStackTrace } from './tracekit';

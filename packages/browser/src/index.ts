@@ -1,7 +1,7 @@
 export * from './exports';
 
-import { Integrations as CoreIntegrations } from '@sentry-csii/core';
-import { getGlobalObject } from '@sentry-csii/utils';
+import { Integrations as CoreIntegrations } from 'csii-sentry-core';
+import { getGlobalObject } from 'csii-sentry-utils';
 
 import * as BrowserIntegrations from './integrations';
 import * as Transports from './transports';

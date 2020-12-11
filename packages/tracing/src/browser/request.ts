@@ -1,5 +1,5 @@
-import { getCurrentHub } from '@sentry-csii/hub';
-import { addInstrumentationHandler, isInstanceOf, isMatchingPattern } from '@sentry-csii/utils';
+import { getCurrentHub } from 'csii-sentry-hub';
+import { addInstrumentationHandler, isInstanceOf, isMatchingPattern } from 'csii-sentry-utils';
 
 import { Span } from '../span';
 import { getActiveTransaction, hasTracingEnabled } from '../utils';

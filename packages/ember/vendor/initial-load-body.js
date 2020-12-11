@@ -1,3 +1,3 @@
 if (window.performance && window.performance.mark) {
-  window.performance.mark('@sentry-csii/ember:initial-load-end');
+  window.performance.mark('csii-sentry-ember:initial-load-end');
 }

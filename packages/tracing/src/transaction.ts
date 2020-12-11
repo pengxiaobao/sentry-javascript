@@ -1,6 +1,6 @@
-import { getCurrentHub, Hub } from '@sentry-csii/hub';
-import { Event, Measurements, Transaction as TransactionInterface, TransactionContext } from '@sentry-csii/types';
-import { isInstanceOf, logger } from '@sentry-csii/utils';
+import { getCurrentHub, Hub } from 'csii-sentry-hub';
+import { Event, Measurements, Transaction as TransactionInterface, TransactionContext } from 'csii-sentry-types';
+import { isInstanceOf, logger } from 'csii-sentry-utils';
 
 import { Span as SpanClass, SpanRecorder } from './span';
 

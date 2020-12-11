@@ -1,9 +1,9 @@
 {
-  "name": "@sentry-csii/integrations",
+  "name": "csii-sentry-integrations",
   "version": "5.29.0",
   "description": "Pluggable integrations that can be used to enhance JS SDKs",
-  "repository": "git://github.com/getsentry/sentry-javascript.git",
-  "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/integrations",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/integrations",
   "author": "Sentry",
   "license": "BSD-3-Clause",
   "engines": {
@@ -16,13 +16,13 @@
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@sentry-csii/types": "5.29.0",
-    "@sentry-csii/utils": "5.29.0",
+    "csii-sentry-types": "5.29.0",
+    "csii-sentry-utils": "5.29.0",
     "localforage": "1.8.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@sentry-csii-internal/eslint-config-sdk": "5.29.0",
+    "sentry-csii-internal-eslint-config-sdk": "5.29.0",
     "chai": "^4.1.2",
     "eslint": "7.6.0",
     "jest": "^24.7.1",

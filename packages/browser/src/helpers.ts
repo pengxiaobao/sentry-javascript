@@ -1,6 +1,6 @@
-import { API, captureException, withScope } from '@sentry-csii/core';
-import { DsnLike, Event as SentryEvent, Mechanism, Scope, WrappedFunction } from '@sentry-csii/types';
-import { addExceptionMechanism, addExceptionTypeValue, logger } from '@sentry-csii/utils';
+import { API, captureException, withScope } from 'csii-sentry-core';
+import { DsnLike, Event as SentryEvent, Mechanism, Scope, WrappedFunction } from 'csii-sentry-types';
+import { addExceptionMechanism, addExceptionTypeValue, logger } from 'csii-sentry-utils';
 
 let ignoreOnError: number = 0;
 
@@ -114,7 +114,7 @@ export function wrap(
   /* eslint-enable prefer-rest-params */
 
   // Accessing some objects may throw
-  // ref: https://github.com/getsentry/sentry-javascript/issues/1168
+  // ref: https://github.com/pengxiaobao/sentry-javascript/issues/1168
   try {
     for (const property in fn) {
       if (Object.prototype.hasOwnProperty.call(fn, property)) {

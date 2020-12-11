@@ -1,5 +1,5 @@
 declare module 'ember-get-config' {
-  import { BrowserOptions } from '@sentry-csii/browser';
+  import { BrowserOptions } from 'csii-sentry-browser';
   type EmberSentryConfig = {
     sentry: BrowserOptions;
     transitionTimeout: number;
@@ -14,7 +14,7 @@ declare module 'ember-get-config' {
     minimumComponentRenderDuration: number;
   };
   const config: {
-    '@sentry-csii/ember': EmberSentryConfig;
+    'csii-sentry-ember': EmberSentryConfig;
   };
   export default config;
 }

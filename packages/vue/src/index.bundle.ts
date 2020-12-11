@@ -11,7 +11,7 @@ export {
   Status,
   Thread,
   User,
-} from '@sentry-csii/types';
+} from 'csii-sentry-types';
 
 export {
   BrowserClient,
@@ -46,10 +46,10 @@ export {
   withScope,
   SDK_NAME,
   SDK_VERSION,
-} from '@sentry-csii/browser';
+} from 'csii-sentry-browser';
 
-import { Integrations as BrowserIntegrations } from '@sentry-csii/browser';
-import { getGlobalObject } from '@sentry-csii/utils';
+import { Integrations as BrowserIntegrations } from 'csii-sentry-browser';
+import { getGlobalObject } from 'csii-sentry-utils';
 
 export { init } from './sdk';
 

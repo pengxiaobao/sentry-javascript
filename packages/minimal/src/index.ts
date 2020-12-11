@@ -1,4 +1,4 @@
-import { getCurrentHub, Hub, Scope } from '@sentry-csii/hub';
+import { getCurrentHub, Hub, Scope } from 'csii-sentry-hub';
 import {
   Breadcrumb,
   CaptureContext,
@@ -10,7 +10,7 @@ import {
   Transaction,
   TransactionContext,
   User,
-} from '@sentry-csii/types';
+} from 'csii-sentry-types';
 
 /**
  * This calls a function on the current hub.

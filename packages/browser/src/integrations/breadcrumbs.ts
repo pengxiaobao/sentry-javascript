@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable max-lines */
-import { getCurrentHub } from '@sentry-csii/core';
-import { Event, Integration, Severity } from '@sentry-csii/types';
+import { getCurrentHub } from 'csii-sentry-core';
+import { Event, Integration, Severity } from 'csii-sentry-types';
 import {
   addInstrumentationHandler,
   getEventDescription,
@@ -9,7 +9,7 @@ import {
   htmlTreeAsString,
   parseUrl,
   safeJoin,
-} from '@sentry-csii/utils';
+} from 'csii-sentry-utils';
 
 /** JSDoc */
 interface BreadcrumbsOptions {

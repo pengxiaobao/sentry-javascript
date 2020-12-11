@@ -1,4 +1,4 @@
-import { Event, SentryRequest, Session } from '@sentry-csii/types';
+import { Event, SentryRequest, Session } from 'csii-sentry-types';
 
 import { API } from './api';
 

@@ -1,8 +1,8 @@
 import { AfterViewInit, Directive, Injectable, Input, OnInit } from '@angular/core';
 import { Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { getCurrentHub } from '@sentry-csii/browser';
-import { Span, Transaction, TransactionContext } from '@sentry-csii/types';
-import { logger, stripUrlQueryAndFragment, timestampWithMs } from '@sentry-csii/utils';
+import { getCurrentHub } from 'csii-sentry-browser';
+import { Span, Transaction, TransactionContext } from 'csii-sentry-types';
+import { logger, stripUrlQueryAndFragment, timestampWithMs } from 'csii-sentry-utils';
 import { Observable } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
 
@@ -76,7 +76,7 @@ export class TraceService {
           description: `${navigationEvent.url}`,
           op: `angular.routing`,
           tags: {
-            'routing.instrumentation': '@sentry-csii/angular',
+            'routing.instrumentation': 'csii-sentry-angular',
             url: strippedUrl,
             ...(navigationEvent.navigationTrigger && {
               navigationTrigger: navigationEvent.navigationTrigger,

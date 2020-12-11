@@ -4,8 +4,8 @@ import { defaultRoutingInstrumentation } from '../../src/browser/router';
 
 let mockChangeHistory: ({ to, from }: { to: string; from?: string }) => void = () => undefined;
 let addInstrumentationHandlerType: string = '';
-jest.mock('@sentry-csii/utils', () => {
-  const actual = jest.requireActual('@sentry-csii/utils');
+jest.mock('csii-sentry-utils', () => {
+  const actual = jest.requireActual('csii-sentry-utils');
   return {
     ...actual,
     addInstrumentationHandler: ({ callback, type }: any): void => {

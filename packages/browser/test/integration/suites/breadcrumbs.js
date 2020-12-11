@@ -1,43 +1,43 @@
-describe("breadcrumbs", function() {
-  it(
-    optional("should record an XMLHttpRequest with a handler", IS_LOADER),
-    function() {
-      return runInSandbox(sandbox, { manual: true }, function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "/base/subjects/example.json");
-        xhr.onreadystatechange = function() {};
-        xhr.send();
-        waitForXHR(xhr, function() {
-          Sentry.captureMessage("test");
-          window.finalizeManualTest();
-        });
-      }).then(function(summary) {
-        // The async loader doesn't wrap XHR
-        if (IS_LOADER) {
-          return;
-        }
-        assert.equal(summary.breadcrumbs.length, 1);
-        assert.equal(summary.breadcrumbs[0].type, "http");
-        assert.equal(summary.breadcrumbs[0].category, "xhr");
-        assert.equal(summary.breadcrumbs[0].data.method, "GET");
-      });
-    }
-  );
-
-  it(
-    optional(
-      "should record an XMLHttpRequest with a handler attached after send was called",
-      IS_LOADER
-    ),
-    function() {
-      return runInSandbox(sandbox, { manual: true }, function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "/base/subjects/example.json");
-        xhr.send();
-        xhr.onreadystatechange = function() {
-          window.handlerCalled = true;
-        };
-        waitForXHR(xhr, function() {
+{
+  "name": "sentry-csii-internal-eslint-plugin-sdk",
+  "version": "5.29.0",
+  "description": "Official Sentry SDK eslint plugin",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/eslint-plugin-sdk",
+  "author": "Sentry",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "prettier": "1.19.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"{src,test}/**/*.js\"",
+    "fix": "prettier --write \"{src,test}/**/*.js\"",
+    "test": "mocha test --recursive",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
           Sentry.captureMessage("test");
           window.finalizeManualTest();
         });
@@ -447,7 +447,7 @@ describe("breadcrumbs", function() {
   });
 
   it("should bail out if accessing the `type` and `target` properties of an event throw an exception", function() {
-    // see: https://github.com/getsentry/sentry-javascript/issues/768
+    // see: https://github.com/pengxiaobao/sentry-javascript/issues/768
     return runInSandbox(sandbox, function() {
       // click <input/>
       var click = new MouseEvent("click");

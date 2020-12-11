@@ -14,7 +14,7 @@ Register the package as a plugin in `gastby-config.js`:
   // ...
   plugins: [
     {
-      resolve: "@sentry-csii/gatsby",
+      resolve: "csii-sentry-gatsby",
       options: {
           dsn: process.env.SENTRY_DSN, // this is the default
       }
@@ -40,14 +40,14 @@ To automatically capture the `release` value on Vercel you will need to register
 
 ## Sentry Performance
 
-To enable tracing, supply either `tracesSampleRate` or `tracesSampler` to the options and make sure you have installed the `@sentry-csii/tracing` package. This will also turn on the `BrowserTracing` integration for automatic instrumentation of pageloads and navigations.
+To enable tracing, supply either `tracesSampleRate` or `tracesSampler` to the options and make sure you have installed the `csii-sentry-tracing` package. This will also turn on the `BrowserTracing` integration for automatic instrumentation of pageloads and navigations.
 
 ```javascript
 {
   // ...
   plugins: [
     {
-      resolve: "@sentry-csii/gatsby",
+      resolve: "csii-sentry-gatsby",
       options: {
         dsn: process.env.SENTRY_DSN, // this is the default
 
@@ -88,7 +88,7 @@ If you want to supply options to the `BrowserTracing` integration, use the `brow
   // ...
   plugins: [
     {
-      resolve: "@sentry-csii/gatsby",
+      resolve: "csii-sentry-gatsby",
       options: {
           dsn: process.env.SENTRY_DSN, // this is the default
           tracesSampleRate: 1, // or tracesSampler (see above)

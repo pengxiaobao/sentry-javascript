@@ -1,4 +1,4 @@
-import { Transaction, TransactionContext } from '@sentry-csii/types';
+import { Transaction, TransactionContext } from 'csii-sentry-types';
 
 export type Action = 'PUSH' | 'REPLACE' | 'POP';
 

@@ -1,4 +1,4 @@
-import { Event as SentryEvent, ExtendedError } from '@sentry-csii/types';
+import { Event as SentryEvent, ExtendedError } from 'csii-sentry-types';
 
 import { ExtraErrorData } from '../src/extraerrordata';
 

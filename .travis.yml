@@ -20,16 +20,16 @@ cache:
 
 jobs:
   include:
-    - name: '@sentry-csii/packages - build and test [node v6]'
+    - name: 'csii-sentry-packages - build and test [node v6]'
       node_js: '6'
       script: scripts/test.sh
-    - name: '@sentry-csii/packages - build and test [node v8]'
+    - name: 'csii-sentry-packages - build and test [node v8]'
       node_js: '8'
       script: scripts/test.sh
-    - name: '@sentry-csii/packages - build and test [node v10]'
+    - name: 'csii-sentry-packages - build and test [node v10]'
       node_js: '10'
       script: scripts/test.sh
-    - name: '@sentry-csii/packages - build and test [node v12]'
+    - name: 'csii-sentry-packages - build and test [node v12]'
       node_js: '12'
       script: scripts/test.sh
     - name: '@sentry/packages - build and test [node v14]'

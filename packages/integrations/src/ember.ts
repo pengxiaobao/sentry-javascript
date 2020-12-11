@@ -1,5 +1,5 @@
-import { EventProcessor, Hub, Integration } from '@sentry-csii/types';
-import { getGlobalObject, isInstanceOf, logger } from '@sentry-csii/utils';
+import { EventProcessor, Hub, Integration } from 'csii-sentry-types';
+import { getGlobalObject, isInstanceOf, logger } from 'csii-sentry-utils';
 
 /** JSDoc */
 export class Ember implements Integration {

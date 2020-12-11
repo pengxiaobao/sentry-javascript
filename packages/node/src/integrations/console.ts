@@ -1,6 +1,6 @@
-import { getCurrentHub } from '@sentry-csii/core';
-import { Integration, Severity } from '@sentry-csii/types';
-import { fill } from '@sentry-csii/utils';
+import { getCurrentHub } from 'csii-sentry-core';
+import { Integration, Severity } from 'csii-sentry-types';
+import { fill } from 'csii-sentry-utils';
 import * as util from 'util';
 
 /** Console module integration */

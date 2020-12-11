@@ -1,43 +1,43 @@
-import { terser } from 'rollup-plugin-terser';
-import typescript from 'rollup-plugin-typescript2';
-import license from 'rollup-plugin-license';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-
-const commitHash = require('child_process')
-  .execSync('git rev-parse --short HEAD', { encoding: 'utf-8' })
-  .trim();
-
-const terserInstance = terser({
-  mangle: {
-    // captureExceptions and captureMessage are public API methods and they don't need to be listed here
-    // as mangler doesn't touch user-facing thing, however sentryWrapped is not, and it would be mangled into a minified version.
-    // We need those full names to correctly detect our internal frames for stripping.
-    // I listed all of them here just for the clarity sake, as they are all used in the frames manipulation process.
-    reserved: ['captureException', 'captureMessage', 'sentryWrapped'],
-    properties: {
-      regex: /^_[^_]/,
-    },
+{
+  "name": "sentry-csii-internal-eslint-plugin-sdk",
+  "version": "5.29.0",
+  "description": "Official Sentry SDK eslint plugin",
+  "repository": "git://github.com/pengxiaobao/sentry-javascript.git",
+  "homepage": "https://github.com/pengxiaobao/sentry-javascript/tree/master/packages/eslint-plugin-sdk",
+  "author": "Sentry",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=6"
   },
-});
-
-const paths = {
-  '@sentry-csii/utils': ['../utils/src'],
-  '@sentry-csii/core': ['../core/src'],
-  '@sentry-csii/hub': ['../hub/src'],
-  '@sentry-csii/types': ['../types/src'],
-  '@sentry-csii/minimal': ['../minimal/src'],
-  '@sentry-csii/browser': ['../browser/src'],
-};
-
-const plugins = [
-  typescript({
-    tsconfig: 'tsconfig.build.json',
-    tsconfigOverride: {
-      compilerOptions: {
-        declaration: false,
-        declarationMap: false,
-        module: 'ES2015',
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "prettier": "1.19.0",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "link:yarn": "yarn link",
+    "link:yalc": "yalc publish",
+    "lint": "prettier --check \"{src,test}/**/*.js\"",
+    "fix": "prettier --write \"{src,test}/**/*.js\"",
+    "test": "mocha test --recursive",
+    "pack": "npm pack"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
         paths,
       },
     },
@@ -62,7 +62,7 @@ const bundleConfig = {
     ...plugins,
     license({
       sourcemap: true,
-      banner: `/*! @sentry-csii/tracing & @sentry-csii/browser <%= pkg.version %> (${commitHash}) | https://github.com/getsentry/sentry-javascript */`,
+      banner: `/*! csii-sentry-tracing & csii-sentry-browser <%= pkg.version %> (${commitHash}) | https://github.com/pengxiaobao/sentry-javascript */`,
     }),
   ],
 };

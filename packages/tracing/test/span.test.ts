@@ -1,5 +1,5 @@
-import { BrowserClient } from '@sentry-csii/browser';
-import { Hub, Scope } from '@sentry-csii/hub';
+import { BrowserClient } from 'csii-sentry-browser';
+import { Hub, Scope } from 'csii-sentry-hub';
 
 import { Span, SpanStatus, Transaction } from '../src';
 import { TRACEPARENT_REGEXP } from '../src/utils';

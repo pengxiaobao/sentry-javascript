@@ -1,4 +1,4 @@
-import { Event } from '@sentry-csii/types';
+import { Event } from 'csii-sentry-types';
 
 import { getCurrentHub, Hub, Scope } from '../src';
 

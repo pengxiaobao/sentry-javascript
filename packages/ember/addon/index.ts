@@ -1,18 +1,18 @@
-import * as Sentry from '@sentry-csii/browser';
-import { addGlobalEventProcessor, SDK_VERSION, BrowserOptions } from '@sentry-csii/browser';
+import * as Sentry from 'csii-sentry-browser';
+import { addGlobalEventProcessor, SDK_VERSION, BrowserOptions } from 'csii-sentry-browser';
 import environmentConfig from 'ember-get-config';
 import { macroCondition, isDevelopingApp } from '@embroider/macros';
 import { next } from '@ember/runloop';
 import { assert, warn } from '@ember/debug';
 import Ember from 'ember';
-import { timestampWithMs } from '@sentry-csii/utils';
+import { timestampWithMs } from 'csii-sentry-utils';
 
 declare module '@ember/debug' {
   export function assert(desc: string, test: unknown): void;
 }
 
 export function InitSentryForEmber(_runtimeConfig: BrowserOptions | undefined) {
-  const config = environmentConfig['@sentry-csii/ember'];
+  const config = environmentConfig['csii-sentry-ember'];
   assert('Missing configuration', config);
   assert('Missing configuration for Sentry.', config.sentry);
 
@@ -31,7 +31,7 @@ export function InitSentryForEmber(_runtimeConfig: BrowserOptions | undefined) {
         'Ember.onerror found. Using Ember.onerror can hide some errors (such as flushed runloop errors) from Sentry. Use Sentry.captureException to capture errors within Ember.onError or remove it to have errors caught by Sentry directly. This error can be silenced via addon configuration.',
         !Ember.onerror,
         {
-          id: '@sentry-csii/ember.ember-onerror-detected',
+          id: 'csii-sentry-ember.ember-onerror-detected',
         },
       );
     });
@@ -92,7 +92,7 @@ function createEmberEventProcessor(): void {
         packages: [
           ...((event.sdk && event.sdk.packages) || []),
           {
-            name: 'npm:@sentry-csii/ember',
+            name: 'npm:csii-sentry-ember',
             version: SDK_VERSION,
           },
         ],
@@ -104,4 +104,4 @@ function createEmberEventProcessor(): void {
   }
 }
 
-export * from '@sentry-csii/browser';
+export * from 'csii-sentry-browser';

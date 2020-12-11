@@ -1,5 +1,5 @@
-import { TransportOptions } from '@sentry-csii/types';
-import { SentryError } from '@sentry-csii/utils';
+import { TransportOptions } from 'csii-sentry-types';
+import { SentryError } from 'csii-sentry-utils';
 import * as HttpsProxyAgent from 'https-proxy-agent';
 
 import { HTTPTransport } from '../../src/transports/http';
